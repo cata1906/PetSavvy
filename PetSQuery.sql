@@ -237,23 +237,6 @@ INSERT INTO Gastos VALUES(13,'Gastos administrativos para el funcionamiento del 
 INSERT INTO Gastos VALUES(14,'Seguros y licencias requeridos','2022/01/28',341.80);
 
 
--- data de animal
-INSERT INTO Animal VALUES(1,10,' Labrador Retriever',30,'Negro','Amigable',8,1);
-INSERT INTO Animal VALUES(2,2,' Bulldog Francés',45,'Blanco','Tímido',4,2);
-INSERT INTO Animal VALUES(3,12,' Poodle',35,'Marrón','Juguetón',5,3);
-INSERT INTO Animal VALUES(4,10,' Golden Retriever',50,'Gris','Protector',9,4);
-INSERT INTO Animal VALUES(5,7,' Boxer',40,'Dorado','Leal',12,5);
-INSERT INTO Animal VALUES(6,11,' Chihuahua',25,'Crema','Sociable',11,6);
-INSERT INTO Animal VALUES(7,3,' Husky Siberiano',55,'Atigrado','Independiente',1,7);
-INSERT INTO Animal VALUES(8,3,' Rottweiler',60,'Leonado','Curioso',14,8);
-INSERT INTO Animal VALUES(9,8,' Beagle',38,'Crema','Energético',6,9);
-INSERT INTO Animal VALUES(10,9,' Dalmata',42,'Canela','Tranquilo',2,10);
-INSERT INTO Animal VALUES(11,11,' Bichón Frisé',28,'Tricolor','Tranquilo',3,11);
-INSERT INTO Animal VALUES(12,5,' Pastor Alemán',48,'Bicolor','Cariñoso',10,12);
-INSERT INTO Animal VALUES(13,9,' Cocker Spaniel',33,'Crema','Agresivo',13,13);
-INSERT INTO Animal VALUES(14,6,' Shih Tzu',37,'Plateado','Territorial',7,14);
-
-
 --data de alimentos
 INSERT INTO Alimentos VALUES(1,'Royal Canin',6);
 INSERT INTO Alimentos VALUES(2,'Eukanuba',6);
@@ -269,22 +252,6 @@ INSERT INTO Alimentos VALUES(11,'Merrick',24);
 INSERT INTO Alimentos VALUES(12,'Blue Buffalo',24);
 INSERT INTO Alimentos VALUES(13,'Canagan',15);
 INSERT INTO Alimentos VALUES(14,'Orijen',26);
-
---data de almacen
-INSERT INTO Almacen VALUES(1,1,14,8,4,10);
-INSERT INTO Almacen VALUES(2,2,8,10,8,7);
-INSERT INTO Almacen VALUES(3,3,1,9,4,10);
-INSERT INTO Almacen VALUES(4,4,7,10,12,1);
-INSERT INTO Almacen VALUES(5,5,3,9,10,9);
-INSERT INTO Almacen VALUES(6,6,10,12,2,14);
-INSERT INTO Almacen VALUES(7,7,2,5,12,9);
-INSERT INTO Almacen VALUES(8,8,2,8,8,13);
-INSERT INTO Almacen VALUES(9,9,3,6,1,7);
-INSERT INTO Almacen VALUES(10,10,4,11,14,6);
-INSERT INTO Almacen VALUES(11,11,12,13,4,7);
-INSERT INTO Almacen VALUES(12,12,9,10,13,14);
-INSERT INTO Almacen VALUES(13,13,13,2,5,1);
-INSERT INTO Almacen VALUES(14,14,11,1,10,6);
 
 
 --data de proceso_adopcion
@@ -303,7 +270,21 @@ INSERT INTO Proceso_Adopcion VALUES(12,12,'36113437');
 INSERT INTO Proceso_Adopcion VALUES(13,13,'40329218');			
 INSERT INTO Proceso_Adopcion VALUES(14,14,'55230028');			
 
-
+-- data de animal
+INSERT INTO Animal VALUES(1,10,' Labrador Retriever',30,'Negro','Amigable',8,1);
+INSERT INTO Animal VALUES(2,2,' Bulldog Francés',45,'Blanco','Tímido',4,2);
+INSERT INTO Animal VALUES(3,12,' Poodle',35,'Marrón','Juguetón',5,3);
+INSERT INTO Animal VALUES(4,10,' Golden Retriever',50,'Gris','Protector',9,4);
+INSERT INTO Animal VALUES(5,7,' Boxer',40,'Dorado','Leal',12,5);
+INSERT INTO Animal VALUES(6,11,' Chihuahua',25,'Crema','Sociable',11,6);
+INSERT INTO Animal VALUES(7,3,' Husky Siberiano',55,'Atigrado','Independiente',1,7);
+INSERT INTO Animal VALUES(8,3,' Rottweiler',60,'Leonado','Curioso',14,8);
+INSERT INTO Animal VALUES(9,8,' Beagle',38,'Crema','Energético',6,9);
+INSERT INTO Animal VALUES(10,9,' Dalmata',42,'Canela','Tranquilo',2,10);
+INSERT INTO Animal VALUES(11,11,' Bichón Frisé',28,'Tricolor','Tranquilo',3,11);
+INSERT INTO Animal VALUES(12,5,' Pastor Alemán',48,'Bicolor','Cariñoso',10,12);
+INSERT INTO Animal VALUES(13,9,' Cocker Spaniel',33,'Crema','Agresivo',13,13);
+INSERT INTO Animal VALUES(14,6,' Shih Tzu',37,'Plateado','Territorial',7,14);
 
 --data de adoptante
 INSERT INTO Adoptante VALUES(1,'Octavio','75635231','933425575','Calle San Miguel, Urb. Los Pinos, Lima',1,1);
@@ -321,6 +302,22 @@ INSERT INTO Adoptante VALUES(12,'Lena','75069595','938756881','Pasaje Las Margar
 INSERT INTO Adoptante VALUES(13,'Nicole','86353107','928856149','Jr. Los Girasoles, Urb. Las Palmas, Huaraz',13,13);
 INSERT INTO Adoptante VALUES(14,'Angie','95367170','951025004','Calle Los Olivos, Villa Hermosa, Ica',14,14);
 
+--data de medicamentos
+INSERT INTO Medicamentos VALUES(1,'Amoxicilina','2023/02/01','2024/02/01');
+INSERT INTO Medicamentos VALUES(2,'Metronidazol','2023/02/02','2024/02/02');
+INSERT INTO Medicamentos VALUES(3,'Ibuprofeno','2023/02/03','2024/02/03');
+INSERT INTO Medicamentos VALUES(4,'Prednisona','2023/02/04','2024/02/04');
+INSERT INTO Medicamentos VALUES(5,'Ciprofloxacina','2023/02/05','2024/02/05');
+INSERT INTO Medicamentos VALUES(6,'Ketoprofeno','2023/02/06','2024/02/06');
+INSERT INTO Medicamentos VALUES(7,'Enrofloxacina','2023/02/07','2024/02/07');
+INSERT INTO Medicamentos VALUES(8,'Meloxicam','2023/02/08','2024/02/08');
+INSERT INTO Medicamentos VALUES(9,'Fenbendazol','2023/02/09','2024/02/09');
+INSERT INTO Medicamentos VALUES(10,'Ivermectina','2023/02/10','2024/02/10');
+INSERT INTO Medicamentos VALUES(11,'Dipirona','2023/02/11','2024/02/11');
+INSERT INTO Medicamentos VALUES(12,'Ranitidina','2023/02/12','2024/02/12');
+INSERT INTO Medicamentos VALUES(13,'Omeprazol','2023/02/13','2024/02/13');
+INSERT INTO Medicamentos VALUES(14,'Doxiciclina','2023/02/14','2024/02/14');
+
 --data de receta
 INSERT INTO Receta VALUES(1,1,1,1);
 INSERT INTO Receta VALUES(2,2,2,2);
@@ -337,21 +334,22 @@ INSERT INTO Receta VALUES(12,8,12,12);
 INSERT INTO Receta VALUES(13,13,13,13);
 INSERT INTO Receta VALUES(14,5,14,14);
 
---data de medicamentos
-INSERT INTO Medicamentos VALUES(1,'Amoxicilina','2023/02/01','2024/02/01');
-INSERT INTO Medicamentos VALUES(2,'Metronidazol','2023/02/02','2024/02/02');
-INSERT INTO Medicamentos VALUES(3,'Ibuprofeno','2023/02/03','2024/02/03');
-INSERT INTO Medicamentos VALUES(4,'Prednisona','2023/02/04','2024/02/04');
-INSERT INTO Medicamentos VALUES(5,'Ciprofloxacina','2023/02/05','2024/02/05');
-INSERT INTO Medicamentos VALUES(6,'Ketoprofeno','2023/02/06','2024/02/06');
-INSERT INTO Medicamentos VALUES(7,'Enrofloxacina','2023/02/07','2024/02/07');
-INSERT INTO Medicamentos VALUES(8,'Meloxicam','2023/02/08','2024/02/08');
-INSERT INTO Medicamentos VALUES(9,'Fenbendazol','2023/02/09','2024/02/09');
-INSERT INTO Medicamentos VALUES(10,'Ivermectina','2023/02/10','2024/02/10');
-INSERT INTO Medicamentos VALUES(11,'Dipirona','2023/02/11','2024/02/11');
-INSERT INTO Medicamentos VALUES(12,'Ranitidina','2023/02/12','2024/02/12');
-INSERT INTO Medicamentos VALUES(13,'Omeprazol','2023/02/13','2024/02/13');
-INSERT INTO Medicamentos VALUES(14,'Doxiciclina','2023/02/14','2024/02/14');
+--data de almacen
+INSERT INTO Almacen VALUES(1,1,14,8,4,10);
+INSERT INTO Almacen VALUES(2,2,8,10,8,7);
+INSERT INTO Almacen VALUES(3,3,1,9,4,10);
+INSERT INTO Almacen VALUES(4,4,7,10,12,1);
+INSERT INTO Almacen VALUES(5,5,3,9,10,9);
+INSERT INTO Almacen VALUES(6,6,10,12,2,14);
+INSERT INTO Almacen VALUES(7,7,2,5,12,9);
+INSERT INTO Almacen VALUES(8,8,2,8,8,13);
+INSERT INTO Almacen VALUES(9,9,3,6,1,7);
+INSERT INTO Almacen VALUES(10,10,4,11,14,6);
+INSERT INTO Almacen VALUES(11,11,12,13,4,7);
+INSERT INTO Almacen VALUES(12,12,9,10,13,14);
+INSERT INTO Almacen VALUES(13,13,13,2,5,1);
+INSERT INTO Almacen VALUES(14,14,11,1,10,6);
+
 -----------------------------------------------------------------------------------------------------------Brenda----------------------------------------------------------------------------------------------------------------
 
 -----------------------------Datos de gastos---------------------------
