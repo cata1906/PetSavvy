@@ -120,7 +120,7 @@ ALTER TABLE Receta ADD CONSTRAINT fk_Animal FOREIGN KEY (id_Animal) REFERENCES A
 ALTER TABLE Receta ADD CONSTRAINT fk_Medicamento2 FOREIGN KEY (id_medicamento) REFERENCES Medicamentos (id_medicamento);
 ALTER TABLE Receta ADD CONSTRAINT fk_Veterinario2 FOREIGN KEY (id_Veterinario) REFERENCES Veterinario (id);
 
-------------------Andrea--------------
+------------------------------------------------------------------------------------------------------------------------Andrea---------------------------------------------------------------------------------------------------
 --data para veterinarios
 INSERT INTO Veterinario VALUES(1,'Jon','Stein','953779');
 INSERT INTO Veterinario VALUES(2,'Billy','Jansson','466972');
@@ -353,7 +353,7 @@ INSERT INTO Medicamentos VALUES(12,'Ranitidina','2023/02/12','2024/02/12');
 INSERT INTO Medicamentos VALUES(13,'Omeprazol','2023/02/13','2024/02/13');
 INSERT INTO Medicamentos VALUES(14,'Doxiciclina','2023/02/14','2024/02/14');
 
------------------------------Brenda---------------------------
+-----------------------------------------------------------------------------------------------------------Brenda----------------------------------------------------------------------------------------------------------------
 
 -----------------------------Datos de gastos---------------------------
 INSERT INTO Gastos VALUES(15,'Pasaje','2023-05-12',37.5)
@@ -601,7 +601,498 @@ INSERT INTO Receta VALUES(28,20,15,28)
 INSERT INTO Receta VALUES(29,21,22,29)			
 
 
+-----------------------------------------------------------------------------------------------Salvador---------------------------------------------------------------------------------------------------------------------
+--data Veterinario
+INSERT INTO Veterinario VALUES(30,'Carmen','Campos','5016487');
+INSERT INTO Veterinario VALUES(31,'Jose','Carbajal','876523');
+INSERT INTO Veterinario VALUES(32,'Jorge','Ramos','654213');
+INSERT INTO Veterinario VALUES(33,'Renzo','Nuñez','976454');
+INSERT INTO Veterinario VALUES(34,'Narumi','Quiroz','254632');
+INSERT INTO Veterinario VALUES(35,'Rodrigo','Rodriguez','754129');
+INSERT INTO Veterinario VALUES(36,'Zafiro','Alva','741215');
+INSERT INTO Veterinario VALUES(37,'Claudia','Ortega','853674');
+INSERT INTO Veterinario VALUES(38,'Alexander','Huertas','193752');
+INSERT INTO Veterinario VALUES(39,'Miguel','Pahuara','946821');
+INSERT INTO Veterinario VALUES(40,'Yuriko','Torres','657823');
+INSERT INTO Veterinario VALUES(41,'Henry','Chavez','865413');
+INSERT INTO Veterinario VALUES(42,'Cristian','Espinoza','658754');
+INSERT INTO Veterinario VALUES(43,'Camila','Lazaro','875321');
+INSERT INTO Veterinario VALUES(44,'Luis','Orihuela','645248');
 
+--data Albergue
+INSERT INTO Albergue VALUES(30,'Patitas Unidas','Jr Cuellar 654',30);	
+INSERT INTO Albergue VALUES(31,'Animals Waiting','Av. Los Nogales 865',31);	
+INSERT INTO Albergue VALUES(32,'Delicia Refugio','Calle Comercio 648',32);	
+INSERT INTO Albergue VALUES(33,'Aww Paws','Av. Colonial, Urbanización las colmenas 683',33);	
+INSERT INTO Albergue VALUES(34,'Patitas de nieve','Urb. 20 de Agosto N° 112',34);	
+INSERT INTO Albergue VALUES(35,'Maullidos puros','Calle la pizzas 985',35);	
+INSERT INTO Albergue VALUES(36,'Patitas dulces','Resindecial El Remanso 854',36);	
+INSERT INTO Albergue VALUES(37,'Bienestar Animal','La Rinconada 875',37);	
+INSERT INTO Albergue VALUES(38,'Wonder Paws','Av. Productores 1125 5',38);	
+INSERT INTO Albergue VALUES(39,'Perrito doo','Av. Luis Macagno 312, 2° piso',39);	
+INSERT INTO Albergue VALUES(40,'Bebes peludos','Calle los eucaliptos 1288',40);	
+INSERT INTO Albergue VALUES(41,'Patitas Fabulosas','Jr. Jose Maria Quiroga 123',41);	
+INSERT INTO Albergue VALUES(42,'Animal Valley ','Av. Pachacutec 3025',42);	
+INSERT INTO Albergue VALUES(43,'Peludito Manchado','Av. Mariategui 1129',43);	
+INSERT INTO Albergue VALUES(44,'Amigos por siempre','Urbanización El Descanso 8812',44);	
+
+--data Catalogo
+INSERT INTO Catalogo VALUES(30);
+INSERT INTO Catalogo VALUES(31);
+INSERT INTO Catalogo VALUES(32);
+INSERT INTO Catalogo VALUES(33);
+INSERT INTO Catalogo VALUES(34);
+INSERT INTO Catalogo VALUES(35);
+INSERT INTO Catalogo VALUES(36);
+INSERT INTO Catalogo VALUES(37);
+INSERT INTO Catalogo VALUES(38);
+INSERT INTO Catalogo VALUES(39);
+INSERT INTO Catalogo VALUES(40);
+INSERT INTO Catalogo VALUES(41);
+INSERT INTO Catalogo VALUES(42);
+INSERT INTO Catalogo VALUES(43);
+INSERT INTO Catalogo VALUES(44);
+
+--data Encargado
+INSERT INTO Encargado VALUES('78524632','Martin','985412566',30);
+INSERT INTO Encargado VALUES('45632158','Abel','952632152',31);
+INSERT INTO Encargado VALUES('78542163','Angelica','948563215',32);
+INSERT INTO Encargado VALUES('85421365','Sayumi','987521452',33);
+INSERT INTO Encargado VALUES('65421532','Nahomi','013584756',34);
+INSERT INTO Encargado VALUES('78524654','Victoria','965214563',35);
+INSERT INTO Encargado VALUES('70125463','Thiago','01632548756',36);
+INSERT INTO Encargado VALUES('69542135','David','0118526324',37);
+INSERT INTO Encargado VALUES('68215321','Elvis','985421485',38);
+INSERT INTO Encargado VALUES('70021536','Pamela','9521452639',39);
+INSERT INTO Encargado VALUES('66521452','Jhosef','0152639875',40);
+INSERT INTO Encargado VALUES('71125639','Ruben','965824563',41);
+INSERT INTO Encargado VALUES('68665236','Elena','985000632',42);
+INSERT INTO Encargado VALUES('70000542','Gonzalo','980056456',43);
+INSERT INTO Encargado VALUES('85415263','Zafiro','920225634',44);
+
+--data cita
+INSERT INTO Cita VALUES(30,30,'78524632');
+INSERT INTO Cita VALUES(31,31,'45632158');
+INSERT INTO Cita VALUES(32,32,'78542163');
+INSERT INTO Cita VALUES(33,33,'85421365');
+INSERT INTO Cita VALUES(34,34,'65421532');
+INSERT INTO Cita VALUES(35,35,'78524654');
+INSERT INTO Cita VALUES(36,36,'70125463');
+INSERT INTO Cita VALUES(37,37,'69542135');
+INSERT INTO Cita VALUES(38,38,'68215321');
+INSERT INTO Cita VALUES(39,39,'70021536');
+INSERT INTO Cita VALUES(40,40,'66521452');
+INSERT INTO Cita VALUES(41,41,'71125639');
+INSERT INTO Cita VALUES(42,42,'68665236');
+INSERT INTO Cita VALUES(43,43,'70000542');
+INSERT INTO Cita VALUES(44,44,'85415263');
+
+--data de accesorios
+INSERT INTO Accesorios VALUES(30,'Lentes',50);
+INSERT INTO Accesorios VALUES(31,'Zapatos',45);
+INSERT INTO Accesorios VALUES(32,'Botas',15);
+INSERT INTO Accesorios VALUES(33,'Sandalias',55);
+INSERT INTO Accesorios VALUES(34,'Corta uñas',10);
+INSERT INTO Accesorios VALUES(35,'Pelota',60);
+INSERT INTO Accesorios VALUES(36,'Pelota',80);
+INSERT INTO Accesorios VALUES(37,'cangurera para perro',40);
+INSERT INTO Accesorios VALUES(38,'Mantas',10);
+INSERT INTO Accesorios VALUES(39,'Perfume',15);
+INSERT INTO Accesorios VALUES(40,'Botas',30);
+INSERT INTO Accesorios VALUES(41,'Zapatos',60);
+INSERT INTO Accesorios VALUES(42,'Lentes',40);
+INSERT INTO Accesorios VALUES(43,'Arnés',11);
+INSERT INTO Accesorios VALUES(44,'Capa',90);
+
+--data de gastos
+INSERT INTO Gastos VALUES(30,'Mantenimiento del albergue','2023/05/23',350.70);
+INSERT INTO Gastos VALUES(31,'Comida','2022/12/13',225.50);
+INSERT INTO Gastos VALUES(32,'Otros','2022/11/15',150.60);
+INSERT INTO Gastos VALUES(33,'Reposicion de accesorios','2023/04/10',100.00);
+INSERT INTO Gastos VALUES(34,'Cambio de iluminacion del albergue','2023/05/30',50.20);
+INSERT INTO Gastos VALUES(35,'Reparacion de equipos','2023/04/16',85.70);
+INSERT INTO Gastos VALUES(36,'Evento de conoce a los animales en el albergue','2023/03/15',263.60);
+INSERT INTO Gastos VALUES(37,'Comida','2023/02/13',260.00);
+INSERT INTO Gastos VALUES(38,'Publicidad','2023/05/18',80.00);
+INSERT INTO Gastos VALUES(39,'Pasaje','2023/05/21',65.30);
+INSERT INTO Gastos VALUES(40,'Compra de camas para los animales del refugio','2023/05/29',126.50);
+INSERT INTO Gastos VALUES(41,'Medicina para los cachorros recién nacidos','2023/05/20',430.25);
+INSERT INTO Gastos VALUES(42,'Comida','2023/05/13',245.40);
+INSERT INTO Gastos VALUES(43,'Pasaje','2023/05/25',45.60);
+INSERT INTO Gastos VALUES(44,'Compra de juguetes para los animales del refugio','2023/05/30',80.75);
+
+-- data de animal
+INSERT INTO Animal VALUES(30,2,'Galgo',90,'Blanco','Juguetón',33,30);
+INSERT INTO Animal VALUES(31,8,'Galgo',50,'Negro','Amigable',35,30);
+INSERT INTO Animal VALUES(32,5,'Podenco',60,'Blanco Oscuro','Tímido',30,32);
+INSERT INTO Animal VALUES(33,8,'Mestizo',35,'Marrón con Negro','Juguetón',40,32);
+INSERT INTO Animal VALUES(34,7,'Schnauzer',50,'Gris','Juguetón',44,32);
+INSERT INTO Animal VALUES(35,7,'Schnauzer',40,'Girs con blanco','Leal y amigable',41,35);
+INSERT INTO Animal VALUES(36,11,'Podenco',50,'Crema','Sociable',37,38);
+INSERT INTO Animal VALUES(37,3,'Husky Siberiano',80,'Marrón claro con manchas blancas','Juguetón y carismático',31,40);
+INSERT INTO Animal VALUES(38,4,'Husky Siberiano',90,'Blanco','Curioso y Amigable',43,40);
+INSERT INTO Animal VALUES(39,10,'Pug',38,'Crema','Energético y Curioso',42,30);
+INSERT INTO Animal VALUES(40,5,'Dalmata',42,'Blanco con negro','Tranquilo',38,32);
+INSERT INTO Animal VALUES(41,5,'Husky Siberiano',28,'Blanco con plomo','Divertido',34,33);
+INSERT INTO Animal VALUES(42,6,'Jack Rusell',48,'Blanco con manchas marrón claro','Cariñoso',36,33);
+INSERT INTO Animal VALUES(43,8,'Chihuahua',33,'Crema','Agresivo y territorial',32,33);
+INSERT INTO Animal VALUES(44,8,'Pomeranian',37,'Crema','Enojón',39,35);
+
+--data de medicamentos
+INSERT INTO Medicamentos VALUES(30,'Hepatiopet','2023/05/01','2024/05/01');
+INSERT INTO Medicamentos VALUES(31,'Cefazolina','2023/02/11','2024/02/11');
+INSERT INTO Medicamentos VALUES(32,'Doxicilina','2023/02/15','2024/02/15');
+INSERT INTO Medicamentos VALUES(33,'Metronidazol','2023/02/10','2024/02/10');
+INSERT INTO Medicamentos VALUES(34,'Tilosina','2023/02/15','2024/02/15');
+INSERT INTO Medicamentos VALUES(35,'Eritromicina','2022/08/05','2023/08/05');
+INSERT INTO Medicamentos VALUES(36,'Ampicilina','2022/11/06','2023/11/06');
+INSERT INTO Medicamentos VALUES(37,'Bencilpenicilina','2022/08/05','2023/08/08');
+INSERT INTO Medicamentos VALUES(38,'Meloxicam','2023/03/12','2024/03/12');
+INSERT INTO Medicamentos VALUES(39,'Enrofloxacino','2023/05/09','2024/05/09');
+INSERT INTO Medicamentos VALUES(40,'Marbofloxacino','2022/10/10','2023/10/10');
+INSERT INTO Medicamentos VALUES(41,'Meloxivet ','2023/02/11','2024/02/11');
+INSERT INTO Medicamentos VALUES(42,'Pradofloxacino','2023/01/12','2024/01/12');
+INSERT INTO Medicamentos VALUES(43,'Gastropet','2023/02/13','2024/02/13');
+INSERT INTO Medicamentos VALUES(44,'Dipirona','2023/02/14','2024/02/14');
+
+--data de receta
+INSERT INTO Receta VALUES(30,33,42,41);
+INSERT INTO Receta VALUES(31,42,32,35);
+INSERT INTO Receta VALUES(32,35,36,42);
+INSERT INTO Receta VALUES(33,32,41,38);
+INSERT INTO Receta VALUES(34,34,30,33);
+INSERT INTO Receta VALUES(35,37,44,32);
+INSERT INTO Receta VALUES(36,36,33,36);
+INSERT INTO Receta VALUES(37,41,40,31);
+INSERT INTO Receta VALUES(38,43,35,43);
+INSERT INTO Receta VALUES(39,38,37,44);
+INSERT INTO Receta VALUES(40,30,34,30);
+INSERT INTO Receta VALUES(41,31,43,37);
+INSERT INTO Receta VALUES(42,39,31,39);
+INSERT INTO Receta VALUES(43,40,38,40);
+INSERT INTO Receta VALUES(44,44,39,34);
+
+--data de alimentos
+INSERT INTO Alimentos VALUES(30,'Proplan',6);
+INSERT INTO Alimentos VALUES(31,'Vet Life',6);
+INSERT INTO Alimentos VALUES(32,'Cambo',6);
+INSERT INTO Alimentos VALUES(33,'Equilibrio',19);
+INSERT INTO Alimentos VALUES(34,'Royal Canin',14);
+INSERT INTO Alimentos VALUES(35,'Mimaskot',23);
+INSERT INTO Alimentos VALUES(36,'Pure Life',30);
+INSERT INTO Alimentos VALUES(37,'Purina One',29);
+INSERT INTO Alimentos VALUES(38,'Bravery',4);
+INSERT INTO Alimentos VALUES(39,'Hills',30);
+INSERT INTO Alimentos VALUES(40,'Earthborn',27);
+INSERT INTO Alimentos VALUES(41,'Brit Care',24);
+INSERT INTO Alimentos VALUES(42,'Taste Of The Wild',24);
+INSERT INTO Alimentos VALUES(43,'Super Can',15);
+INSERT INTO Alimentos VALUES(44,'Nutram',26);
+
+--data de almacen
+INSERT INTO Almacen VALUES(30,33,33,8,22,21);
+INSERT INTO Almacen VALUES(31,41,37,12,31,40);
+INSERT INTO Almacen VALUES(32,42,31,151,42,35);
+INSERT INTO Almacen VALUES(33,35,40,35,36,38);
+INSERT INTO Almacen VALUES(34,44,42,24,14,41);
+INSERT INTO Almacen VALUES(35,37,44,28,21,25);
+INSERT INTO Almacen VALUES(36,36,44,40,16,16);
+INSERT INTO Almacen VALUES(37,39,33,17,7,8);
+INSERT INTO Almacen VALUES(38,40,32,28,18,5);
+INSERT INTO Almacen VALUES(39,37,42,9,25,19);
+INSERT INTO Almacen VALUES(40,10,37,15,14,29);
+INSERT INTO Almacen VALUES(41,38,31,18,18,31);
+INSERT INTO Almacen VALUES(42,34,41,10,29,35);
+INSERT INTO Almacen VALUES(43,32,44,23,30,38);
+INSERT INTO Almacen VALUES(44,30,37,5,36,43);
+
+--data de proceso_adopcion
+INSERT INTO Proceso_Adopcion VALUES(30,30,'78524632');
+INSERT INTO Proceso_Adopcion VALUES(31,31,'45632158');
+INSERT INTO Proceso_Adopcion VALUES(32,32,'78542163');
+INSERT INTO Proceso_Adopcion VALUES(33,33,'85421365');
+INSERT INTO Proceso_Adopcion VALUES(34,34,'65421532');
+INSERT INTO Proceso_Adopcion VALUES(35,35,'78524654');
+INSERT INTO Proceso_Adopcion VALUES(36,36,'70125463');
+INSERT INTO Proceso_Adopcion VALUES(37,37,'69542135');
+INSERT INTO Proceso_Adopcion VALUES(38,38,'68215321');
+INSERT INTO Proceso_Adopcion VALUES(39,39,'70021536');
+INSERT INTO Proceso_Adopcion VALUES(40,40,'66521452');
+INSERT INTO Proceso_Adopcion VALUES(41,41,'71125639');
+INSERT INTO Proceso_Adopcion VALUES(42,42,'68665236');
+INSERT INTO Proceso_Adopcion VALUES(43,43,'70000542');
+INSERT INTO Proceso_Adopcion VALUES(44,44,'85415263');
+
+--data de adoptante
+INSERT INTO Adoptante VALUES(30,'Ximena','75285642','996564521','Calle los Nogales, Urb. Magnolias, Ate',30,30);
+INSERT INTO Adoptante VALUES(31,'Lidia','84526321','985475698','Jr. Los Pinos 678, Huarochiri',31,31);
+INSERT INTO Adoptante VALUES(32,'Roger','65865421','996633524','Av. el Sol 556, Residencial Iquitos, Comas',32,32);
+INSERT INTO Adoptante VALUES(33,'Francis','66852142','951753456','Av. Industrial 154, Ate',33,33);
+INSERT INTO Adoptante VALUES(34,'Jose','70152963','946285631','Av. Viña del Mar 332, Residencial Pariachi, San Juan de Lurigancho',34,34);
+INSERT INTO Adoptante VALUES(35,'Eduardo','78521463','946854112','Av. Los Alamos 321, San Miguel',35,35);
+INSERT INTO Adoptante VALUES(36,'Claudio','85632145','976655482','Av. Petit Thouars 3065, Lince',36,36);
+INSERT INTO Adoptante VALUES(37,'Aron','75632152','985263645','Calle Santa Rosa cdr. 5, San Carlos',37,37);
+INSERT INTO Adoptante VALUES(38,'Vicente','85421632','951623754','Av. Los Pinedos, Residencial Magdalena, Magdalena',38,38);
+INSERT INTO Adoptante VALUES(39,'Yadira','77852631','963741456','Jr. Puno 6543, Piura',39,39);
+INSERT INTO Adoptante VALUES(40,'Laura','77415522','951452185','Calle Vendaval 1514, Trujillo',40,40);
+INSERT INTO Adoptante VALUES(41,'Arturo','71412151','990050024','Av. Los Ciruelos 4578, Callao',41,41);
+INSERT INTO Adoptante VALUES(42,'Luis','85269743','986225065','Av. las palmeras 8888, Urb. Nogales, Surco',42,42);
+INSERT INTO Adoptante VALUES(43,'Alexa','70152863','976542185','Calle Cusco 154, Cercado',43,43);
+INSERT INTO Adoptante VALUES(44,'Miguel','69885632','963524869','Av. Los Olivos 457, Ancon',44,44);
+
+
+----------------------------------------------------------------------------------------------------------------------Tony--------------------------------------------------------------------------------------------------
+
+--------------------Datos de veterinarios--------------------
+INSERT INTO Veterinario VALUES(45,'Luis','Tamayo','78924');
+INSERT INTO Veterinario VALUES(46,'Carlos','Alvarado','458912');
+INSERT INTO Veterinario VALUES(47,'Jorge','Castillo','985142');
+INSERT INTO Veterinario VALUES(48,'Geremy','Marrufo','548175');
+INSERT INTO Veterinario VALUES(49,'Adrian','Medina','789456');
+INSERT INTO Veterinario VALUES(50,'Adriano','Vasquez','741693');
+INSERT INTO Veterinario VALUES(51,'Adriana','Olaya','125846');
+INSERT INTO Veterinario VALUES(52,'Fernanda','Perez','698127');
+INSERT INTO Veterinario VALUES(53,'Renzo','Ramirez','782453');
+INSERT INTO Veterinario VALUES(54,'Joshua','Silva','458169');
+INSERT INTO Veterinario VALUES(55,'Angelo','Garcia','855641');
+INSERT INTO Veterinario VALUES(56,'Franklin','Velarde','436581');
+INSERT INTO Veterinario VALUES(57,'Ricardo','Chavez','356912');
+INSERT INTO Veterinario VALUES(58,'Viviana','Barboza','781256');
+INSERT INTO Veterinario VALUES(59,'Carolina','Alvarez','598416');
+
+
+--------------------Datos de albergues--------------------
+INSERT INTO Albergue VALUES(45,'Amor y rescate', 'America Umamarca 15058, Cercado de Lima',45);	
+INSERT INTO Albergue VALUES(46,'Patas felices','Avenida Javier Prado Este 456, San Isidro',46);	
+INSERT INTO Albergue VALUES(47,'Proteccion y amor', 'Avenida Bolívar 567, Pueblo Libre',47);	
+INSERT INTO Albergue VALUES(48,'Patitas Callejeras', 'Calle Saenz Peña 789, Barranco',48);	
+INSERT INTO Albergue VALUES(49,'Esperanza y vida', 'Calle Las Begonias 567, San Isidro',49);	
+INSERT INTO Albergue VALUES(50,'Amor y rescate', 'Avenida El Derby 234, Surco',50);	
+INSERT INTO Albergue VALUES(51,'Amigos fieles', 'Avenida de los patriotas 15087, San Miguel',51);	
+INSERT INTO Albergue VALUES(52,'Vida y compañia', 'Avenida los pinos 476, Independencia',52);	
+INSERT INTO Albergue VALUES(53,'Dulce Hogar', 'Avenida María Elena Moyano, Villa el Salvador',53);
+INSERT INTO Albergue VALUES(54,'Amigos sin fronteras', 'Avenida Salvador Allende 437, San Juan de Miraflores',54);	
+INSERT INTO Albergue VALUES(55,'Corazon peludo', 'Calle Pablo Neruda 497, Santa Anita',55);	
+INSERT INTO Albergue VALUES(56,'Huellitas Santa Clara', 'Calle Félix Mafaretti 269, Ate',56);	
+INSERT INTO Albergue VALUES(57,'Casa de esperanza', 'Jiron Manuel de Lara 107, Los olivos',57);	
+INSERT INTO Albergue VALUES(58,'Mascotas amigables', 'Avenida Pacasmayo 872, San Martin de Porres',58);	
+INSERT INTO Albergue VALUES(59,'Santuario de felicidad','Jiron 2 de Mayo 724, Callao',59);	
+
+
+--------------------Datos de catalogos--------------------
+INSERT INTO Catalogo VALUES(45);
+INSERT INTO Catalogo VALUES(46);
+INSERT INTO Catalogo VALUES(57);
+INSERT INTO Catalogo VALUES(48);
+INSERT INTO Catalogo VALUES(49);
+INSERT INTO Catalogo VALUES(50);
+INSERT INTO Catalogo VALUES(51);
+INSERT INTO Catalogo VALUES(52);
+INSERT INTO Catalogo VALUES(53);
+INSERT INTO Catalogo VALUES(54);
+INSERT INTO Catalogo VALUES(55);
+INSERT INTO Catalogo VALUES(56);
+INSERT INTO Catalogo VALUES(57);
+INSERT INTO Catalogo VALUES(58);
+INSERT INTO Catalogo VALUES(59);
+
+
+--------------------Datos de encargados--------------------
+INSERT INTO Encargado VALUES('49547812','Gustavo','954126984',45);	
+INSERT INTO Encargado VALUES('65982457','Francisco','956325871',46);	
+INSERT INTO Encargado VALUES('70569452','Mathias','976582441',47);	
+INSERT INTO Encargado VALUES('71447818','Jean','944218342',48);
+INSERT INTO Encargado VALUES('26719775','Rocio','976634528',49);	
+INSERT INTO Encargado VALUES('23225470','Marco','989263578',50);	
+INSERT INTO Encargado VALUES('46581109','Cristian','995124158',51);	
+INSERT INTO Encargado VALUES('72940586','Liliana','987123456',52);	
+INSERT INTO Encargado VALUES('27419638','Oliver','923746158',53);	
+INSERT INTO Encargado VALUES('36752410','Carol','945827610',54);	
+INSERT INTO Encargado VALUES('58321697','Sara','988451236',55);
+INSERT INTO Encargado VALUES('43219876','Arturo','925687445',56);	
+INSERT INTO Encargado VALUES('65432109','Yasser','978123456',57);	
+INSERT INTO Encargado VALUES('43852697','Abril','976123456',58);	
+INSERT INTO Encargado VALUES('67509213','Julio','976765432',59);
+
+
+--------------------Datos de citas--------------------
+INSERT INTO Cita VALUES(45,45,'49547812');
+INSERT INTO Cita VALUES(46,46,'65982457');
+INSERT INTO Cita VALUES(47,47,'70569452');
+INSERT INTO Cita VALUES(48,48,'71447818');
+INSERT INTO Cita VALUES(49,49,'26719775');
+INSERT INTO Cita VALUES(50,50,'23225470');
+INSERT INTO Cita VALUES(51,51,'46581109');
+INSERT INTO Cita VALUES(52,52,'72940586');
+INSERT INTO Cita VALUES(53,53,'27419638');
+INSERT INTO Cita VALUES(54,54,'36752410');
+INSERT INTO Cita VALUES(55,55,'58321697');
+INSERT INTO Cita VALUES(56,56,'43219876');
+INSERT INTO Cita VALUES(57,57,'65432109');
+INSERT INTO Cita VALUES(58,58,'43852697');
+INSERT INTO Cita VALUES(59,59,'67509213');
+
+
+--------------------Datos de accesorios--------------------
+INSERT INTO Accesorios VALUES(45,'Mantas',50);
+INSERT INTO Accesorios VALUES(46,'Polos',30);
+INSERT INTO Accesorios VALUES(47,'Sandalias',20);
+INSERT INTO Accesorios VALUES(48,'Pelotas',30);
+INSERT INTO Accesorios VALUES(49,'Bolsas',100);
+INSERT INTO Accesorios VALUES(50,'Pelota',60);
+INSERT INTO Accesorios VALUES(51,'Juguetes para perros',80);
+INSERT INTO Accesorios VALUES(52,'Platos',40);
+INSERT INTO Accesorios VALUES(53,'Ropa para perros',40);
+INSERT INTO Accesorios VALUES(54,'Collares',40);
+INSERT INTO Accesorios VALUES(55,'Cepillos',20);
+INSERT INTO Accesorios VALUES(56,'Zapatos',60);
+INSERT INTO Accesorios VALUES(57,'Lentes',40);
+INSERT INTO Accesorios VALUES(58,'Juguetes para gatos',50);
+INSERT INTO Accesorios VALUES(59,'Ropa para gatos',30);
+
+
+--------------------Datos de gastos--------------------
+INSERT INTO Gastos VALUES(45,'Compra de ropa para perros', '2023/03/15',150.00);
+INSERT INTO Gastos VALUES(46,'Publicidad', '2023/01/30',250.00);
+INSERT INTO Gastos VALUES(47,'Compra de comida para animales', '2022/12/08',100.50);
+INSERT INTO Gastos VALUES(48,'Compra de medicinas', '2022/06/11',145.75);
+INSERT INTO Gastos VALUES(49,'Gastos administrativos', '2022/11/11',225.70);
+INSERT INTO Gastos VALUES(50,'Translado de mascotas', '2023/02/15',70.35);
+INSERT INTO Gastos VALUES(51,'Salarios y bonos', '2023/04/19',120.00);
+INSERT INTO Gastos VALUES(52,'Mantenimiento del albergue', '2022/10/04',250.60);
+INSERT INTO Gastos VALUES(53,'Pasajes', '2022/12/05',30.50);
+INSERT INTO Gastos VALUES(54,'Mantenimiento del albergue', '2023/01/10',250.60);
+INSERT INTO Gastos VALUES(55,'Pago de licencias', '2022/01/26',74.50);
+INSERT INTO Gastos VALUES(56,'Compra de ropa para gatos', '2022/06/09',45.00);
+INSERT INTO Gastos VALUES(57,'Compra de juguetes', '2022/07/30',40.00);
+INSERT INTO Gastos VALUES(58,'Compra de comida para animales', '2023/05/30',150.00);
+INSERT INTO Gastos VALUES(59,'Mantenimiento', '2022/02/14',250.60);
+
+
+--------------------Datos de animales--------------------
+INSERT INTO Animal VALUES(45,2,'Boxer', 20, 'Marron', 'Juguetón',32,45);
+INSERT INTO Animal VALUES(46,6,'Beagle', 25, 'Marron y blanco', 'Tranquilo',50,46);
+INSERT INTO Animal VALUES(47,5,'Persa', 10, 'Blanco', 'Tranquilo',15,47);
+INSERT INTO Animal VALUES(48,1,'Siames', 18, 'Marron', 'Curioso',56,48);
+INSERT INTO Animal VALUES(49,1,'Poodle', 21, 'Blanco', 'Cariñoso',12,49);
+INSERT INTO Animal VALUES(50,2,'Pastor Aleman', 32, 'Marron', 'Leal',13,50);
+INSERT INTO Animal VALUES(51,4,'Chihuahua', 9, 'Marron', 'Juguetón',56,51);
+INSERT INTO Animal VALUES(52,3,'Pitbull', 27, 'Gris', 'Enérgico',54,52);
+INSERT INTO Animal VALUES(53,1,'Abisinio', 27, 'Naranja', 'Adorable',23,53);
+INSERT INTO Animal VALUES(54,2,'Ragdoll', 19, 'Blanco', 'Tranquilo',32,54);
+INSERT INTO Animal VALUES(55,3,'Rottweiler', 30, 'Negro', 'Amigable',55,55);
+INSERT INTO Animal VALUES(56,3,'Dobermann', 30, 'Negro', 'Territorial',43,56);
+INSERT INTO Animal VALUES(57,6,'Ragamuffin', 21, 'Blanco y marron', 'Aventurero',37,57);
+INSERT INTO Animal VALUES(58,1,'Maine coon', 30, 'Gris', 'Cariñoso',40,58);
+INSERT INTO Animal VALUES(59,7,'Cocker', 26, 'Blanco y negro', 'Adorable',51,59);
+
+
+--------------------Datos de medicinas--------------------
+INSERT INTO Medicamentos VALUES(45,'Ivermectina', '2022/08/31', '2027/05/15');
+INSERT INTO Medicamentos VALUES(46,'Carpofeno', '2023/03/01', '2026/06/21');
+INSERT INTO Medicamentos VALUES(47,'Fenbendazol', '2023/04/15', '2028/12/17');
+INSERT INTO Medicamentos VALUES(48,'Agrogenta', '2022/02/15', '2027/02/09');
+INSERT INTO Medicamentos VALUES(49,'Amoxicilina', '2022/06/30', '2028/09/29');
+INSERT INTO Medicamentos VALUES(50,'Avilamicina', '2022/04/07', '2025/03/11');
+INSERT INTO Medicamentos VALUES(51,'Levamisol', '2023/05/10', '2024/10/11');
+INSERT INTO Medicamentos VALUES(52,'Dimetridazol', '2022/08/08', '2026/12/30');
+INSERT INTO Medicamentos VALUES(53,'Flumetrina', '2022/11/24', '2029/11/11');
+INSERT INTO Medicamentos VALUES(54,'Clenbuterol', '2023/09/13', '2024/05/21');
+INSERT INTO Medicamentos VALUES(55,'Oxitetraciclina', '2022/10/20', '2025/10/30');
+INSERT INTO Medicamentos VALUES(56,'Fenobarbital', '2022/07/17', '2027/04/02');
+INSERT INTO Medicamentos VALUES(57,'Flubendazol', '2023/04/21', '2028/05/26');
+INSERT INTO Medicamentos VALUES(58,'Gentamicina', '2022/11/11', '2026/10/14');
+INSERT INTO Medicamentos VALUES(59,'Tiabendazol', '2023/01/12', '2028/02/17');
+
+
+--------------------Datos de recetas--------------------
+INSERT INTO Receta VALUES(45,47,52,31);
+INSERT INTO Receta VALUES(46,49,45,45);
+INSERT INTO Receta VALUES(47,51,15,26);
+INSERT INTO Receta VALUES(48,56,32,34);
+INSERT INTO Receta VALUES(49,58,30,52);
+INSERT INTO Receta VALUES(50,47,31,46);
+INSERT INTO Receta VALUES(51,NULL,NULL,NULL);
+INSERT INTO Receta VALUES(52,NULL,NULL,NULL);
+INSERT INTO Receta VALUES(53,48,29,11);
+INSERT INTO Receta VALUES(54,50,25,10);
+INSERT INTO Receta VALUES(55,55,29,30);
+INSERT INTO Receta VALUES(56,52,25,34);
+INSERT INTO Receta VALUES(57,57,35,50);
+INSERT INTO Receta VALUES(58,45,23,21);
+INSERT INTO Receta VALUES(59,59,52,14);
+
+
+--------------------Datos de alimentos--------------------
+INSERT INTO Alimentos VALUES(45,'Dog Chow',25);
+INSERT INTO Alimentos VALUES(46,'Pedigree',15);
+INSERT INTO Alimentos VALUES(47,'Pro Plan(perros)',17);
+INSERT INTO Alimentos VALUES(48,'Whiskas',20);
+INSERT INTO Alimentos VALUES(49,'Pro Plan(gatos)',25);
+INSERT INTO Alimentos VALUES(50,'Mimaskot',24);
+INSERT INTO Alimentos VALUES(51,'Nutrican',20);
+INSERT INTO Alimentos VALUES(52,'Ricocan',16);
+INSERT INTO Alimentos VALUES(53,'Ricocat',20);
+INSERT INTO Alimentos VALUES(54,'Purina Cat Chow',23);
+INSERT INTO Alimentos VALUES(55,'Friskies',20);
+INSERT INTO Alimentos VALUES(56,'Royal Canin',22);
+INSERT INTO Alimentos VALUES(57,'Purina One',10);
+INSERT INTO Alimentos VALUES(58,'Super Cat',10);
+INSERT INTO Alimentos VALUES(59,'Nutram',8);
+
+
+--------------------Datos de almacen--------------------
+INSERT INTO Almacen VALUES(45,34,55,18,29,42,7);
+INSERT INTO Almacen VALUES(46,23,39,6,47,14,31);
+INSERT INTO Almacen VALUES(47,23,39,6,47,14,31);
+INSERT INTO Almacen VALUES(48,38,3,50,19,44,11);
+INSERT INTO Almacen VALUES(49,27,59,16,32,48,10,25);
+INSERT INTO Almacen VALUES(50,41,56,20,37,53,8,13);
+INSERT INTO Almacen VALUES(51,30,4,24,45,2,57,35);
+INSERT INTO Almacen VALUES(52,17,40,54,22,33,5);
+INSERT INTO Almacen VALUES(53,46,1,60,7,12,39);
+INSERT INTO Almacen VALUES(54,31,51,23,6,14,47);
+INSERT INTO Almacen VALUES(55,9,58,43,21,52,46);
+INSERT INTO Almacen VALUES(56,11,26,3,50,44,31);
+INSERT INTO Almacen VALUES(57,16,10,59,27,32,25);
+INSERT INTO Almacen VALUES(58,41,13,56,8,37,20);
+INSERT INTO Almacen VALUES(59,24,35,4,45,2,30);
+
+
+--------------------Datos de procesos de adopcion--------------------
+INSERT INTO Proceso_Adopcion VALUES(45,45,'49547812');
+INSERT INTO Proceso_Adopcion VALUES(46,46,'65982457');
+INSERT INTO Proceso_Adopcion VALUES(47,47,'70569452');
+INSERT INTO Proceso_Adopcion VALUES(48,48,'71447818');
+INSERT INTO Proceso_Adopcion VALUES(49,49,'26719775');
+INSERT INTO Proceso_Adopcion VALUES(50,50,'23225470');
+INSERT INTO Proceso_Adopcion VALUES(51,51,'46581109');
+INSERT INTO Proceso_Adopcion VALUES(52,52,'72940586');
+INSERT INTO Proceso_Adopcion VALUES(53,53,'27419638');
+INSERT INTO Proceso_Adopcion VALUES(54,54,'36752410');
+INSERT INTO Proceso_Adopcion VALUES(55,55,'58321697');
+INSERT INTO Proceso_Adopcion VALUES(56,56,'43219876');
+INSERT INTO Proceso_Adopcion VALUES(57,57,'65432109');
+INSERT INTO Proceso_Adopcion VALUES(58,58,'43852697');
+INSERT INTO Proceso_Adopcion VALUES(59,59,'67509213');
+
+
+--------------------Datos de adoptante--------------------
+INSERT INTO Adoptante VALUES(45,'Rodrigo', '62345678', '911234567', 'Av. Mariscal Castilla 447, Surco',45,45);
+INSERT INTO Adoptante VALUES(46,'Carlos', '72321985', '945678912', 'Av. Manuel Celendonio de la Torre 234, Santa Anita',46,46);
+INSERT INTO Adoptante VALUES(47,'Marcos', '51234567', '998765432', 'Av. Isabel la Católica 567, La Victoria',47,47);
+INSERT INTO Adoptante VALUES(48,'Stefano', '43219876', '912345678', 'Calle Barcelona 108, San Isidro',48,48);
+INSERT INTO Adoptante VALUES(49,'Danna', '71123456', '977654321', 'Van de Velde 154, San Borja',49,49);
+INSERT INTO Adoptante VALUES(50,'Valeria', '65432198', '967890123', 'Av. Velasco Astete 202, San Borja',50,50);
+INSERT INTO Adoptante VALUES(51,'Enrique', '71234567', '923456789', 'Av. Holanda 762, Los Olivos',51,51);
+INSERT INTO Adoptante VALUES(52,'Angel', '61234567', '999876543', 'Jr. Marqués de Mancera 164, Surco',52,52);
+INSERT INTO Adoptante VALUES(53,'Gabriel', '72321098', '956789012', 'Av. Central 401, San Juan de Miraflores',53,53);
+INSERT INTO Adoptante VALUES(54,'Omar', '73421985', '911145781', 'Av. Sta. Rosa 339, Ate',54,54);
+INSERT INTO Adoptante VALUES(55,'Paul', '62431578', '923456781', 'Av. de los Patriotas 366, San Miguel',55,55);
+INSERT INTO Adoptante VALUES(56,'Belen', '54321987', '912345679', 'Av. República de Venezuela 1400, Breña',56,56);
+INSERT INTO Adoptante VALUES(57,'Micaela', '71345628', '978901234', 'Av. Bosque Huanca, Agustino',57,57);
+INSERT INTO Adoptante VALUES(58,'Ana', '64123857', '976963325', 'Av. el Sol 371, Barranco',58,58);
+INSERT INTO Adoptante VALUES(59,'Joao', '72134586', '945678901', 'Jr. García Calderón 748, Callao',59,59);
 --ver tablas
 Select * from Accesorios
 Select * from Adoptante
