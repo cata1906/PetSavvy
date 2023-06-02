@@ -352,7 +352,6 @@ INSERT INTO Medicamentos VALUES(11,'Dipirona','2023/02/11','2024/02/11');
 INSERT INTO Medicamentos VALUES(12,'Ranitidina','2023/02/12','2024/02/12');
 INSERT INTO Medicamentos VALUES(13,'Omeprazol','2023/02/13','2024/02/13');
 INSERT INTO Medicamentos VALUES(14,'Doxiciclina','2023/02/14','2024/02/14');
-
 -----------------------------------------------------------------------------------------------------------Brenda----------------------------------------------------------------------------------------------------------------
 
 -----------------------------Datos de gastos---------------------------
@@ -424,38 +423,38 @@ INSERT INTO Catalogo VALUES(28);
 INSERT INTO Catalogo VALUES(29);
 
 -----------------------------Datos de encargado---------------------------
-INSERT INTO Encargado VALUES('198111140','Joel','998548656',15)	
-INSERT INTO Encargado VALUES('231504970','Nil','956826598',16)	
-INSERT INTO Encargado VALUES('199795098','Jan','934587162',17)	
-INSERT INTO Encargado VALUES('729416320','Pol','998788474',18)	
-INSERT INTO Encargado VALUES('316193057','Raúl','948956998',19)	
-INSERT INTO Encargado VALUES('232041550','Charlotte','999444666',20)	
-INSERT INTO Encargado VALUES('211047801','Ruby','988569558',21)	
-INSERT INTO Encargado VALUES('255298875','Lilly/Lily','900500122',22)	
-INSERT INTO Encargado VALUES('161324032','Olivia','923650650',23)	
-INSERT INTO Encargado VALUES('701952945','Chloe','960483580',24)	
-INSERT INTO Encargado VALUES('199779165','Sophie','998878584',25)	
-INSERT INTO Encargado VALUES('310314524','Emily','905517847',26)	
-INSERT INTO Encargado VALUES('236755129','Asier','941548715',27)	
-INSERT INTO Encargado VALUES('218008999','Biel','933665848',28)	
-INSERT INTO Encargado VALUES('909728370','Ander','989596000',29)
+INSERT INTO Encargado VALUES('19811114','Joel','998548656',15)	
+INSERT INTO Encargado VALUES('23150497','Nil','956826598',16)	
+INSERT INTO Encargado VALUES('19979509','Jan','934587162',17)	
+INSERT INTO Encargado VALUES('72941632','Pol','998788474',18)	
+INSERT INTO Encargado VALUES('31619305','Raúl','948956998',19)	
+INSERT INTO Encargado VALUES('23204155','Charlotte','999444666',20)	
+INSERT INTO Encargado VALUES('21104780','Ruby','988569558',21)	
+INSERT INTO Encargado VALUES('25529887','Lilly/Lily','900500122',22)	
+INSERT INTO Encargado VALUES('16132403','Olivia','923650650',23)	
+INSERT INTO Encargado VALUES('70195294','Chloe','960483580',24)	
+INSERT INTO Encargado VALUES('19977916','Sophie','998878584',25)	
+INSERT INTO Encargado VALUES('31031452','Emily','905517847',26)	
+INSERT INTO Encargado VALUES('23675512','Asier','941548715',27)	
+INSERT INTO Encargado VALUES('21800899','Biel','933665848',28)	
+INSERT INTO Encargado VALUES('90972837','Ander','989596000',29)
 
 -----------------------------Datos de cita---------------------------
-INSERT INTO Cita VALUES(15,15,'232041550')	
-INSERT INTO Cita VALUES(16,16,'211047801')	
-INSERT INTO Cita VALUES(17,17,'255298875')	
-INSERT INTO Cita VALUES(18,18,'161324032')	
-INSERT INTO Cita VALUES(19,19,'701952945')	
-INSERT INTO Cita VALUES(20,20,'199779165')	
-INSERT INTO Cita VALUES(21,21,'236755129')	
-INSERT INTO Cita VALUES(22,22,'218008999')	
-INSERT INTO Cita VALUES(23,23,'909728370')	
-INSERT INTO Cita VALUES(24,24,'198111140')	
-INSERT INTO Cita VALUES(25,25,'231504970')	
-INSERT INTO Cita VALUES(26,26,'199795098')	
-INSERT INTO Cita VALUES(27,27,'729416320')	
-INSERT INTO Cita VALUES(28,28,'316193057')	
-INSERT INTO Cita VALUES(29,29,'232041550')	
+INSERT INTO Cita VALUES(15,15,'23204155')	
+INSERT INTO Cita VALUES(16,16,'21104780')	
+INSERT INTO Cita VALUES(17,17,'25529887')	
+INSERT INTO Cita VALUES(18,18,'16132403')	
+INSERT INTO Cita VALUES(19,19,'70195294')	
+INSERT INTO Cita VALUES(20,20,'19977916')	
+INSERT INTO Cita VALUES(21,21,'23675512')	
+INSERT INTO Cita VALUES(22,22,'21800899')	
+INSERT INTO Cita VALUES(23,23,'90972837')	
+INSERT INTO Cita VALUES(24,24,'19811114')	
+INSERT INTO Cita VALUES(25,25,'23150497')	
+INSERT INTO Cita VALUES(26,26,'19979509')	
+INSERT INTO Cita VALUES(27,27,'72941632')	
+INSERT INTO Cita VALUES(28,28,'31619305')	
+INSERT INTO Cita VALUES(29,29,'23204155')	
 
 
 -----------------------------Datos de accesorios---------------------------
@@ -476,39 +475,39 @@ INSERT INTO Accesorios VALUES(28,'Juguete',18)
 INSERT INTO Accesorios VALUES(29,'Collar',22)
 
 -----------------------------Datos de proceso_adopcion---------------------------
-INSERT INTO Proceso_Adopcion VALUES(15,15,'232041550')
-INSERT INTO Proceso_Adopcion VALUES(16,16,'211047801')
-INSERT INTO Proceso_Adopcion VALUES(17,17,'255298875')
-INSERT INTO Proceso_Adopcion VALUES(18,18,'161324032')
-INSERT INTO Proceso_Adopcion VALUES(19,19,'701952945')
-INSERT INTO Proceso_Adopcion VALUES(20,20,'199779165')
-INSERT INTO Proceso_Adopcion VALUES(21,21,'236755129')
-INSERT INTO Proceso_Adopcion VALUES(22,22,'218008999')
-INSERT INTO Proceso_Adopcion VALUES(23,23,'909728370')
-INSERT INTO Proceso_Adopcion VALUES(24,24,'198111140')
-INSERT INTO Proceso_Adopcion VALUES(25,25,'231504970')
-INSERT INTO Proceso_Adopcion VALUES(26,26,'199795098')
-INSERT INTO Proceso_Adopcion VALUES(27,27,'729416320')
-INSERT INTO Proceso_Adopcion VALUES(28,28,'316193057')
-INSERT INTO Proceso_Adopcion VALUES(29,29,'232041550')
+INSERT INTO Proceso_Adopcion VALUES(15,15,'23204155')
+INSERT INTO Proceso_Adopcion VALUES(16,16,'21104780')
+INSERT INTO Proceso_Adopcion VALUES(17,17,'25529887')
+INSERT INTO Proceso_Adopcion VALUES(18,18,'16132403')
+INSERT INTO Proceso_Adopcion VALUES(19,19,'70195294')
+INSERT INTO Proceso_Adopcion VALUES(20,20,'19977916')
+INSERT INTO Proceso_Adopcion VALUES(21,21,'23675512')
+INSERT INTO Proceso_Adopcion VALUES(22,22,'21800899')
+INSERT INTO Proceso_Adopcion VALUES(23,23,'90972837')
+INSERT INTO Proceso_Adopcion VALUES(24,24,'19811114')
+INSERT INTO Proceso_Adopcion VALUES(25,25,'23150497')
+INSERT INTO Proceso_Adopcion VALUES(26,26,'19979509')
+INSERT INTO Proceso_Adopcion VALUES(27,27,'72941632')
+INSERT INTO Proceso_Adopcion VALUES(28,28,'31619305')
+INSERT INTO Proceso_Adopcion VALUES(29,29,'23204155')
 
 
 -----------------------------Datos de adoptante---------------------------
-INSERT INTO Adoptante VALUES(15,'Saanvi','493414530','999585548','Av.los andes 153',15,15)				
-INSERT INTO Adoptante VALUES(16,'Angel','706353929','996365484','Calle piroxinitas23',16,16)				
-INSERT INTO Adoptante VALUES(17,'Pari','286578297','987958935','Calle pedregal alto',17,17)				
-INSERT INTO Adoptante VALUES(18,'Diya','28826237','977784666','Calle tupac amaru',18,18)				
-INSERT INTO Adoptante VALUES(19,'Ananya','713503572','922855466','Calle los tulipanes',19,19)				
-INSERT INTO Adoptante VALUES(20,'Aadhya','96558819','912255847','Av. Los alamos',20,20)				
-INSERT INTO Adoptante VALUES(21,'Pihu','545492988','901251445','Av. Primavero 20',21,21)				
-INSERT INTO Adoptante VALUES(22,'Khushi','220176114','901520654','Av.JavierPrado 34',22,22)				
-INSERT INTO Adoptante VALUES(23,'Teo','833287071','987458465','Calle las flores 23',23,23)				
-INSERT INTO Adoptante VALUES(24,'Isaac','494020105','935568152','Calle angulo 123',24,24)				
-INSERT INTO Adoptante VALUES(25,'Arnau','369313778','902236566','Calle las rosas ',25,25)				
-INSERT INTO Adoptante VALUES(26,'Luka','858638709','988556222','Av. Canada',26,26)				
-INSERT INTO Adoptante VALUES(27,'Max','114141236','905478987','Av.aguilar 20',27,27)				
-INSERT INTO Adoptante VALUES(28,'Imran','15351570','915987487','Av.cieneguilla',28,28)				
-INSERT INTO Adoptante VALUES(29,'Youssef','164272557','905648517','Av.jose huerta',29,29)				
+INSERT INTO Adoptante VALUES(15,'Saanvi','49341453','999585548','Av.los andes 153',15,15)				
+INSERT INTO Adoptante VALUES(16,'Angel','70635392','996365484','Calle piroxinitas23',16,16)				
+INSERT INTO Adoptante VALUES(17,'Pari','28657829','987958935','Calle pedregal alto',17,17)				
+INSERT INTO Adoptante VALUES(18,'Diya','2882623','977784666','Calle tupac amaru',18,18)				
+INSERT INTO Adoptante VALUES(19,'Ananya','71350357','922855466','Calle los tulipanes',19,19)				
+INSERT INTO Adoptante VALUES(20,'Aadhya','9655881','912255847','Av. Los alamos',20,20)				
+INSERT INTO Adoptante VALUES(21,'Pihu','54549298','901251445','Av. Primavero 20',21,21)				
+INSERT INTO Adoptante VALUES(22,'Khushi','22017611','901520654','Av.JavierPrado 34',22,22)				
+INSERT INTO Adoptante VALUES(23,'Teo','83328707','987458465','Calle las flores 23',23,23)				
+INSERT INTO Adoptante VALUES(24,'Isaac','49402010','935568152','Calle angulo 123',24,24)				
+INSERT INTO Adoptante VALUES(25,'Arnau','36931377','902236566','Calle las rosas ',25,25)				
+INSERT INTO Adoptante VALUES(26,'Luka','85863870','988556222','Av. Canada',26,26)				
+INSERT INTO Adoptante VALUES(27,'Max','11414123','905478987','Av.aguilar 20',27,27)				
+INSERT INTO Adoptante VALUES(28,'Imran','1535157','915987487','Av.cieneguilla',28,28)				
+INSERT INTO Adoptante VALUES(29,'Youssef','16427255','905648517','Av.jose huerta',29,29)				
 
 
 
@@ -660,11 +659,11 @@ INSERT INTO Encargado VALUES('78542163','Angelica','948563215',32);
 INSERT INTO Encargado VALUES('85421365','Sayumi','987521452',33);
 INSERT INTO Encargado VALUES('65421532','Nahomi','013584756',34);
 INSERT INTO Encargado VALUES('78524654','Victoria','965214563',35);
-INSERT INTO Encargado VALUES('70125463','Thiago','01632548756',36);
-INSERT INTO Encargado VALUES('69542135','David','0118526324',37);
+INSERT INTO Encargado VALUES('70125463','Thiago','016325487',36);
+INSERT INTO Encargado VALUES('69542135','David','011852632',37);
 INSERT INTO Encargado VALUES('68215321','Elvis','985421485',38);
-INSERT INTO Encargado VALUES('70021536','Pamela','9521452639',39);
-INSERT INTO Encargado VALUES('66521452','Jhosef','0152639875',40);
+INSERT INTO Encargado VALUES('70021536','Pamela','952145263',39);
+INSERT INTO Encargado VALUES('66521452','Jhosef','015263987',40);
 INSERT INTO Encargado VALUES('71125639','Ruben','965824563',41);
 INSERT INTO Encargado VALUES('68665236','Elena','985000632',42);
 INSERT INTO Encargado VALUES('70000542','Gonzalo','980056456',43);
@@ -721,6 +720,23 @@ INSERT INTO Gastos VALUES(42,'Comida','2023/05/13',245.40);
 INSERT INTO Gastos VALUES(43,'Pasaje','2023/05/25',45.60);
 INSERT INTO Gastos VALUES(44,'Compra de juguetes para los animales del refugio','2023/05/30',80.75);
 
+--data de proceso_adopcion
+INSERT INTO Proceso_Adopcion VALUES(30,30,'78524632');
+INSERT INTO Proceso_Adopcion VALUES(31,31,'45632158');
+INSERT INTO Proceso_Adopcion VALUES(32,32,'78542163');
+INSERT INTO Proceso_Adopcion VALUES(33,33,'85421365');
+INSERT INTO Proceso_Adopcion VALUES(34,34,'65421532');
+INSERT INTO Proceso_Adopcion VALUES(35,35,'78524654');
+INSERT INTO Proceso_Adopcion VALUES(36,36,'70125463');
+INSERT INTO Proceso_Adopcion VALUES(37,37,'69542135');
+INSERT INTO Proceso_Adopcion VALUES(38,38,'68215321');
+INSERT INTO Proceso_Adopcion VALUES(39,39,'70021536');
+INSERT INTO Proceso_Adopcion VALUES(40,40,'66521452');
+INSERT INTO Proceso_Adopcion VALUES(41,41,'71125639');
+INSERT INTO Proceso_Adopcion VALUES(42,42,'68665236');
+INSERT INTO Proceso_Adopcion VALUES(43,43,'70000542');
+INSERT INTO Proceso_Adopcion VALUES(44,44,'85415263');
+
 -- data de animal
 INSERT INTO Animal VALUES(30,2,'Galgo',90,'Blanco','Juguetón',33,30);
 INSERT INTO Animal VALUES(31,8,'Galgo',50,'Negro','Amigable',35,30);
@@ -729,13 +745,13 @@ INSERT INTO Animal VALUES(33,8,'Mestizo',35,'Marrón con Negro','Juguetón',40,3
 INSERT INTO Animal VALUES(34,7,'Schnauzer',50,'Gris','Juguetón',44,32);
 INSERT INTO Animal VALUES(35,7,'Schnauzer',40,'Girs con blanco','Leal y amigable',41,35);
 INSERT INTO Animal VALUES(36,11,'Podenco',50,'Crema','Sociable',37,38);
-INSERT INTO Animal VALUES(37,3,'Husky Siberiano',80,'Marrón claro con manchas blancas','Juguetón y carismático',31,40);
+INSERT INTO Animal VALUES(37,3,'Husky Siberiano',80,'Marrón claro','Carismático',31,40);
 INSERT INTO Animal VALUES(38,4,'Husky Siberiano',90,'Blanco','Curioso y Amigable',43,40);
 INSERT INTO Animal VALUES(39,10,'Pug',38,'Crema','Energético y Curioso',42,30);
 INSERT INTO Animal VALUES(40,5,'Dalmata',42,'Blanco con negro','Tranquilo',38,32);
 INSERT INTO Animal VALUES(41,5,'Husky Siberiano',28,'Blanco con plomo','Divertido',34,33);
-INSERT INTO Animal VALUES(42,6,'Jack Rusell',48,'Blanco con manchas marrón claro','Cariñoso',36,33);
-INSERT INTO Animal VALUES(43,8,'Chihuahua',33,'Crema','Agresivo y territorial',32,33);
+INSERT INTO Animal VALUES(42,6,'Jack Rusell',48,'Blanco con manchas','Cariñoso',36,33);
+INSERT INTO Animal VALUES(43,8,'Chihuahua',33,'Crema','Agresivo territorial',32,33);
 INSERT INTO Animal VALUES(44,8,'Pomeranian',37,'Crema','Enojón',39,35);
 
 --data de medicamentos
@@ -792,7 +808,7 @@ INSERT INTO Alimentos VALUES(44,'Nutram',26);
 --data de almacen
 INSERT INTO Almacen VALUES(30,33,33,8,22,21);
 INSERT INTO Almacen VALUES(31,41,37,12,31,40);
-INSERT INTO Almacen VALUES(32,42,31,151,42,35);
+INSERT INTO Almacen VALUES(32,42,31,15,42,35);
 INSERT INTO Almacen VALUES(33,35,40,35,36,38);
 INSERT INTO Almacen VALUES(34,44,42,24,14,41);
 INSERT INTO Almacen VALUES(35,37,44,28,21,25);
@@ -806,22 +822,6 @@ INSERT INTO Almacen VALUES(42,34,41,10,29,35);
 INSERT INTO Almacen VALUES(43,32,44,23,30,38);
 INSERT INTO Almacen VALUES(44,30,37,5,36,43);
 
---data de proceso_adopcion
-INSERT INTO Proceso_Adopcion VALUES(30,30,'78524632');
-INSERT INTO Proceso_Adopcion VALUES(31,31,'45632158');
-INSERT INTO Proceso_Adopcion VALUES(32,32,'78542163');
-INSERT INTO Proceso_Adopcion VALUES(33,33,'85421365');
-INSERT INTO Proceso_Adopcion VALUES(34,34,'65421532');
-INSERT INTO Proceso_Adopcion VALUES(35,35,'78524654');
-INSERT INTO Proceso_Adopcion VALUES(36,36,'70125463');
-INSERT INTO Proceso_Adopcion VALUES(37,37,'69542135');
-INSERT INTO Proceso_Adopcion VALUES(38,38,'68215321');
-INSERT INTO Proceso_Adopcion VALUES(39,39,'70021536');
-INSERT INTO Proceso_Adopcion VALUES(40,40,'66521452');
-INSERT INTO Proceso_Adopcion VALUES(41,41,'71125639');
-INSERT INTO Proceso_Adopcion VALUES(42,42,'68665236');
-INSERT INTO Proceso_Adopcion VALUES(43,43,'70000542');
-INSERT INTO Proceso_Adopcion VALUES(44,44,'85415263');
 
 --data de adoptante
 INSERT INTO Adoptante VALUES(30,'Ximena','75285642','996564521','Calle los Nogales, Urb. Magnolias, Ate',30,30);
@@ -882,7 +882,7 @@ INSERT INTO Albergue VALUES(59,'Santuario de felicidad','Jiron 2 de Mayo 724, Ca
 --------------------Datos de catalogos--------------------
 INSERT INTO Catalogo VALUES(45);
 INSERT INTO Catalogo VALUES(46);
-INSERT INTO Catalogo VALUES(57);
+INSERT INTO Catalogo VALUES(47);
 INSERT INTO Catalogo VALUES(48);
 INSERT INTO Catalogo VALUES(49);
 INSERT INTO Catalogo VALUES(50);
@@ -968,6 +968,22 @@ INSERT INTO Gastos VALUES(57,'Compra de juguetes', '2022/07/30',40.00);
 INSERT INTO Gastos VALUES(58,'Compra de comida para animales', '2023/05/30',150.00);
 INSERT INTO Gastos VALUES(59,'Mantenimiento', '2022/02/14',250.60);
 
+--------------------Datos de procesos de adopcion--------------------
+INSERT INTO Proceso_Adopcion VALUES(45,45,'49547812');
+INSERT INTO Proceso_Adopcion VALUES(46,46,'65982457');
+INSERT INTO Proceso_Adopcion VALUES(47,47,'70569452');
+INSERT INTO Proceso_Adopcion VALUES(48,48,'71447818');
+INSERT INTO Proceso_Adopcion VALUES(49,49,'26719775');
+INSERT INTO Proceso_Adopcion VALUES(50,50,'23225470');
+INSERT INTO Proceso_Adopcion VALUES(51,51,'46581109');
+INSERT INTO Proceso_Adopcion VALUES(52,52,'72940586');
+INSERT INTO Proceso_Adopcion VALUES(53,53,'27419638');
+INSERT INTO Proceso_Adopcion VALUES(54,54,'36752410');
+INSERT INTO Proceso_Adopcion VALUES(55,55,'58321697');
+INSERT INTO Proceso_Adopcion VALUES(56,56,'43219876');
+INSERT INTO Proceso_Adopcion VALUES(57,57,'65432109');
+INSERT INTO Proceso_Adopcion VALUES(58,58,'43852697');
+INSERT INTO Proceso_Adopcion VALUES(59,59,'67509213');
 
 --------------------Datos de animales--------------------
 INSERT INTO Animal VALUES(45,2,'Boxer', 20, 'Marron', 'Juguetón',32,45);
@@ -1012,8 +1028,8 @@ INSERT INTO Receta VALUES(47,51,15,26);
 INSERT INTO Receta VALUES(48,56,32,34);
 INSERT INTO Receta VALUES(49,58,30,52);
 INSERT INTO Receta VALUES(50,47,31,46);
-INSERT INTO Receta VALUES(51,NULL,NULL,NULL);
-INSERT INTO Receta VALUES(52,NULL,NULL,NULL);
+INSERT INTO Receta VALUES(51,44,39,40);
+INSERT INTO Receta VALUES(52,42,33,15);
 INSERT INTO Receta VALUES(53,48,29,11);
 INSERT INTO Receta VALUES(54,50,25,10);
 INSERT INTO Receta VALUES(55,55,29,30);
@@ -1042,39 +1058,22 @@ INSERT INTO Alimentos VALUES(59,'Nutram',8);
 
 
 --------------------Datos de almacen--------------------
-INSERT INTO Almacen VALUES(45,34,55,18,29,42,7);
-INSERT INTO Almacen VALUES(46,23,39,6,47,14,31);
-INSERT INTO Almacen VALUES(47,23,39,6,47,14,31);
-INSERT INTO Almacen VALUES(48,38,3,50,19,44,11);
-INSERT INTO Almacen VALUES(49,27,59,16,32,48,10,25);
-INSERT INTO Almacen VALUES(50,41,56,20,37,53,8,13);
-INSERT INTO Almacen VALUES(51,30,4,24,45,2,57,35);
-INSERT INTO Almacen VALUES(52,17,40,54,22,33,5);
-INSERT INTO Almacen VALUES(53,46,1,60,7,12,39);
-INSERT INTO Almacen VALUES(54,31,51,23,6,14,47);
-INSERT INTO Almacen VALUES(55,9,58,43,21,52,46);
-INSERT INTO Almacen VALUES(56,11,26,3,50,44,31);
-INSERT INTO Almacen VALUES(57,16,10,59,27,32,25);
-INSERT INTO Almacen VALUES(58,41,13,56,8,37,20);
-INSERT INTO Almacen VALUES(59,24,35,4,45,2,30);
+INSERT INTO Almacen VALUES(45,34,55,18,29,42);
+INSERT INTO Almacen VALUES(46,23,39,6,47,14);
+INSERT INTO Almacen VALUES(47,23,39,6,47,14);
+INSERT INTO Almacen VALUES(48,38,3,50,19,44);
+INSERT INTO Almacen VALUES(49,27,59,16,32,48);
+INSERT INTO Almacen VALUES(50,41,56,20,37,53);
+INSERT INTO Almacen VALUES(51,30,4,24,45,2);
+INSERT INTO Almacen VALUES(52,17,40,54,22,33);
+INSERT INTO Almacen VALUES(53,46,1,40,7,12);
+INSERT INTO Almacen VALUES(54,31,51,23,6,14);
+INSERT INTO Almacen VALUES(55,9,58,43,21,52);
+INSERT INTO Almacen VALUES(56,11,26,3,50,44);
+INSERT INTO Almacen VALUES(57,16,10,59,27,32);
+INSERT INTO Almacen VALUES(58,41,13,56,8,37);
+INSERT INTO Almacen VALUES(59,24,35,4,45,2);
 
-
---------------------Datos de procesos de adopcion--------------------
-INSERT INTO Proceso_Adopcion VALUES(45,45,'49547812');
-INSERT INTO Proceso_Adopcion VALUES(46,46,'65982457');
-INSERT INTO Proceso_Adopcion VALUES(47,47,'70569452');
-INSERT INTO Proceso_Adopcion VALUES(48,48,'71447818');
-INSERT INTO Proceso_Adopcion VALUES(49,49,'26719775');
-INSERT INTO Proceso_Adopcion VALUES(50,50,'23225470');
-INSERT INTO Proceso_Adopcion VALUES(51,51,'46581109');
-INSERT INTO Proceso_Adopcion VALUES(52,52,'72940586');
-INSERT INTO Proceso_Adopcion VALUES(53,53,'27419638');
-INSERT INTO Proceso_Adopcion VALUES(54,54,'36752410');
-INSERT INTO Proceso_Adopcion VALUES(55,55,'58321697');
-INSERT INTO Proceso_Adopcion VALUES(56,56,'43219876');
-INSERT INTO Proceso_Adopcion VALUES(57,57,'65432109');
-INSERT INTO Proceso_Adopcion VALUES(58,58,'43852697');
-INSERT INTO Proceso_Adopcion VALUES(59,59,'67509213');
 
 
 --------------------Datos de adoptante--------------------
