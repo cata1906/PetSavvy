@@ -18,22 +18,18 @@ Raza varchar(40) NOT NULL,
 Tamanio int NOT NULL,
 Color varchar(20) NOT NULL,
 Afinidad varchar(20) NOT NULL,
-Proceso_Adopcion_Id int NOT NULL,
 Albergue_Id int NOT NULL
 ) 
 
-CREATE TABLE Catalogo (
-ID int NOT NULL PRIMARY KEY,
-) 
 
 CREATE TABLE Cita (
 Id int NOT NULL PRIMARY KEY,
-Catalogo_ID int NOT NULL,
-Encargado_DNI varchar(8) NOT NULL,
+FechaCita date Not null,
+Encargado_DNI varchar(9) NOT NULL,
 )
 
 CREATE TABLE Encargado (
-DNI varchar(8) NOT NULL PRIMARY KEY,
+DNI varchar(9) NOT NULL PRIMARY KEY,
 Nombre varchar(40) NOT NULL,
 Telefono char(9) NULL,
 Albergue_Id int NOT NULL
@@ -43,7 +39,7 @@ CREATE TABLE Gastos (
 ID_Gastos int NOT NULL PRIMARY KEY,
 Nombre varchar(100) NOT NULL,
 Fecha_compra date NOT NULL,
-Monto float NOT NULL,
+Monto money NOT NULL,
 )
 
 CREATE TABLE Medicamentos (
@@ -55,8 +51,10 @@ Fecha_Vencimiento date NOT NULL,
 
 CREATE TABLE Proceso_Adopcion (
 Id int NOT NULL PRIMARY KEY,
-Catalogo_ID int NOT NULL,
-Encargado_DNI varchar(8) NOT NULL,
+Encargado_DNI varchar(9) NOT NULL,
+id_Adoptante int not null,
+id_Cita int not null,
+id_Animal int NOT NULL,
 )
 
 CREATE TABLE Receta (
@@ -92,8 +90,6 @@ CREATE TABLE Adoptante(
     DNI char(8) NOT NULL,
     Telefono char(9) NOT NULL,
     Direccion varchar(90) NULL,
-    Cita_Id int NOT NULL,
-    Proceso_Adopcion_Id int NOT NULL,
 ) 
 CREATE TABLE Accesorios(
     Id_Accesorio int NOT NULL PRIMARY KEY,
@@ -101,24 +97,29 @@ CREATE TABLE Accesorios(
     Cantidad int NOT NULL,
 ) 
 
-ALTER TABLE Adoptante ADD CONSTRAINT fk_Cita FOREIGN KEY (Cita_Id) REFERENCES Cita (Id);
-ALTER TABLE Adoptante ADD CONSTRAINT fk_Proceso_Adopcion FOREIGN KEY (Proceso_Adopcion_Id) REFERENCES Proceso_Adopcion (Id);
 ALTER TABLE Albergue ADD CONSTRAINT fk_Veterinario FOREIGN KEY (Veterinario_id) REFERENCES Veterinario (id);
+
 ALTER TABLE Almacen ADD CONSTRAINT fk_Accesorio FOREIGN KEY (Id_Accesorio) REFERENCES Accesorios (Id_Accesorio);
-ALTER TABLE Almacen ADD CONSTRAINT fk_Albergue3 FOREIGN KEY (Albergue_Id) REFERENCES Albergue (Id);
-ALTER TABLE Almacen ADD CONSTRAINT fk_Almacen FOREIGN KEY (ID_Food) REFERENCES Alimentos (ID_Food);
+ALTER TABLE Almacen ADD CONSTRAINT fk_Albergue1 FOREIGN KEY (Albergue_Id) REFERENCES Albergue (Id);
+ALTER TABLE Almacen ADD CONSTRAINT fk_Alimentos FOREIGN KEY (ID_Food) REFERENCES Alimentos (ID_Food);
 ALTER TABLE Almacen ADD CONSTRAINT fk_Gastos FOREIGN KEY (ID_Gastos) REFERENCES Gastos (ID_Gastos);
 ALTER TABLE Almacen ADD CONSTRAINT fk_Medicamento FOREIGN KEY (id_medicamento) REFERENCES Medicamentos (id_medicamento);
+
 ALTER TABLE Animal ADD CONSTRAINT fk_Albergue2 FOREIGN KEY (Albergue_Id) REFERENCES Albergue (Id);
-ALTER TABLE Animal ADD CONSTRAINT fk_Proceso_Adopcion2 FOREIGN KEY (Proceso_Adopcion_Id) REFERENCES Proceso_Adopcion (Id);
-ALTER TABLE Cita ADD CONSTRAINT fk_Catalogo FOREIGN KEY (Catalogo_ID) REFERENCES Catalogo (ID);
+
 ALTER TABLE Cita ADD CONSTRAINT fk_Encargado FOREIGN KEY (Encargado_DNI) REFERENCES Encargado (DNI);
-ALTER TABLE Encargado ADD CONSTRAINT fk_Albergue FOREIGN KEY (Albergue_Id) REFERENCES Albergue (Id);
-ALTER TABLE Proceso_Adopcion ADD CONSTRAINT fk_Catalogos FOREIGN KEY (Catalogo_ID) REFERENCES Catalogo (ID);
-ALTER TABLE Proceso_Adopcion ADD CONSTRAINT fk_Encargados FOREIGN KEY (Encargado_DNI) REFERENCES Encargado (DNI);
-ALTER TABLE Receta ADD CONSTRAINT fk_Animal FOREIGN KEY (id_Animal) REFERENCES Animal (Id);
+
+ALTER TABLE Encargado ADD CONSTRAINT fk_Albergue3 FOREIGN KEY (Albergue_Id) REFERENCES Albergue (Id);
+
+ALTER TABLE Proceso_Adopcion ADD CONSTRAINT fk_Encargado2 FOREIGN KEY (Encargado_DNI) REFERENCES Encargado (DNI);
+ALTER TABLE Proceso_Adopcion ADD CONSTRAINT fk_Adoptante1 FOREIGN KEY (id_Adoptante) REFERENCES Adoptante (Id_Adoptante);
+ALTER TABLE Proceso_Adopcion ADD CONSTRAINT fk_Cita1 FOREIGN KEY (id_Cita) REFERENCES Cita (Id);
+ALTER TABLE Proceso_Adopcion ADD CONSTRAINT fk_Animal1 FOREIGN KEY (id_Animal) REFERENCES Animal (Id);
+
+
+ALTER TABLE Receta ADD CONSTRAINT fk_Animal2 FOREIGN KEY (id_Animal) REFERENCES Animal (Id);
 ALTER TABLE Receta ADD CONSTRAINT fk_Medicamento2 FOREIGN KEY (id_medicamento) REFERENCES Medicamentos (id_medicamento);
-ALTER TABLE Receta ADD CONSTRAINT fk_Veterinario2 FOREIGN KEY (id_Veterinario) REFERENCES Veterinario (id);
+ALTER TABLE Receta ADD CO
 
 ------------------------------------------------------------------------------------------------------------------------Andrea---------------------------------------------------------------------------------------------------
 --data para veterinarios
