@@ -119,8 +119,7 @@ ALTER TABLE Proceso_Adopcion ADD CONSTRAINT fk_Animal1 FOREIGN KEY (id_Animal) R
 
 ALTER TABLE Receta ADD CONSTRAINT fk_Animal2 FOREIGN KEY (id_Animal) REFERENCES Animal (Id);
 ALTER TABLE Receta ADD CONSTRAINT fk_Medicamento2 FOREIGN KEY (id_medicamento) REFERENCES Medicamentos (id_medicamento);
-ALTER TABLE Receta ADD CO
-
+ALTER TABLE Receta ADD CONSTRAINT fk_Veterinario2 FOREIGN KEY (id_Veterinario) REFERENCES Veterinario (id);
 ------------------------------------------------------------------------------------------------------------------------Andrea---------------------------------------------------------------------------------------------------
 --data para veterinarios
 INSERT INTO Veterinario VALUES(1,'Jon','Stein','953779');
