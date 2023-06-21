@@ -1,0 +1,18 @@
+-----2 por cada uno usando aggregates
+[
+  {
+    "$match": {
+      "Afinidad": {
+        "$eq": "Jugueton"
+      }
+    }
+  },
+  {
+    "$group": {
+      "_id":null,
+      "JuguetonCount": {
+        "$sum": 1
+      }
+    }
+  }
+]
