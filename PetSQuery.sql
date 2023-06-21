@@ -934,7 +934,56 @@ Select * from Veterinario
 
 
 
+-------------------------consultas----------------------------
+-------------------------------------------------------------------------------------------------------------------andrea 
 
+CREATE PROCEDURE MedicamentosParaMascota(@idanimal int)
+AS
+BEGIN
+SELECT a.Id AS ID_Animal,m.Nombre AS Medicamento, v.Nombre AS Vet_Nombre,v.Apellido AS Apellido
+  FROM Animal a
+  INNER JOIN Receta r ON r.id_Animal = a.Id
+  INNER JOIN Veterinario v ON r.id_Veterinario = v.id
+  INNER JOIN Medicamentos m ON m.id_medicamento = r.id_medicamento
+  WHERE a.Id = @idanimal
+  GROUP BY a.Id ,m.Nombre ,v.Nombre ,v.Apellido ;
+END;
+Exec MedicamentosParaMascota @idanimal=29
+--MedicamentosParaMascota: Nos ayuda a identificar que medicamentos necesita una mascota o si no necesita alguna.
+--Además adicionamos los veterinarios responsables de recetar cada medicina por si se necesita hacerle consulta
+
+    
+CREATE FUNCTION GastosPorAnioAlbergue(@idalbergue int) RETURNS TABLE
+AS
+RETURN(
+  WITH GPorAnio AS (
+    SELECT ab.Id AS Albergue_ID,ab.Nombre AS Albergue,YEAR(g.Fecha_Compra) AS Año, SUM(g.Monto) AS Monto_Total
+    FROM Gastos g
+	INNER JOIN Almacen a ON a.ID_Gastos = g.ID_Gastos
+	INNER JOIN Albergue ab ON ab.Id = a.Albergue_Id
+	WHERE ab.Id = @idalbergue
+    GROUP BY ab.Id, ab.Nombre, YEAR(g.Fecha_Compra)
+  )
+  SELECT Albergue_ID,Albergue,Año, Monto_Total
+  FROM GPorAnio
+);
+SELECT *
+FROM GastosPorAnioAlbergue(26);
+--Con esta funcion podemos encontrar el total de gastos por año de un albergue en especifico.
+
+
+CREATE FUNCTION CantidadMascotas(@idalbergue int) RETURNS TABLE
+AS
+RETURN(
+SELECT a.Nombre AS Albergue, COUNT(m.ID) AS CantidadMascotas
+FROM Albergue a
+LEFT JOIN Animal m ON a.Id = m.Albergue_Id
+WHERE a.Id=@idalbergue
+GROUP BY a.Nombre);
+
+SELECT *
+FROM CantidadMascotas(32);
+-- Esta funcion ayudara a los albergues, que cuentan con el software, a saber cuantas mascotas tienen 
 
 
 
