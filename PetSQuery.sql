@@ -935,55 +935,80 @@ Select * from Veterinario
 
 
 -------------------------consultas----------------------------
+	
 -------------------------------------------------------------------------------------------------------------------andrea 
-
-CREATE PROCEDURE MedicamentosParaMascota(@idanimal int)
+	
+-----------Basico----------
+CREATE FUNCTION MedicamentosParaMascota(@idanimal int)
+RETURNS TABLE
 AS
-BEGIN
-SELECT a.Id AS ID_Animal,m.Nombre AS Medicamento, v.Nombre AS Vet_Nombre,v.Apellido AS Apellido
+RETURN (
+  SELECT a.Id AS ID_Animal, m.Nombre AS Medicamento, v.Nombre AS Vet_Nombre, v.Apellido AS Apellido
   FROM Animal a
-  INNER JOIN Receta r ON r.id_Animal = a.Id
-  INNER JOIN Veterinario v ON r.id_Veterinario = v.id
-  INNER JOIN Medicamentos m ON m.id_medicamento = r.id_medicamento
+  LEFT JOIN Receta r ON r.id_Animal = a.Id
+  LEFT JOIN Veterinario v ON r.id_Veterinario = v.id
+  LEFT JOIN Medicamentos m ON m.id_medicamento = r.id_medicamento
   WHERE a.Id = @idanimal
-  GROUP BY a.Id ,m.Nombre ,v.Nombre ,v.Apellido ;
-END;
-Exec MedicamentosParaMascota @idanimal=29
+  GROUP BY a.Id, m.Nombre, v.Nombre, v.Apellido
+);
+SELECT *FROM  MedicamentosParaMascota(20);
 --MedicamentosParaMascota: Nos ayuda a identificar que medicamentos necesita una mascota o si no necesita alguna.
 --Además adicionamos los veterinarios responsables de recetar cada medicina por si se necesita hacerle consulta
 
-    
-CREATE FUNCTION GastosPorAnioAlbergue(@idalbergue int) RETURNS TABLE
+----------INTERMEDIO--------------
+---1. PROCEDURE ActualizarAlmacenAlimentos: Este procedure ayuda a los usuarios que al ingresar 
+---data de el alimento, cantidad adquirida y el monto total, se actualicen las tablas de Alimentos
+--- y almacen, con la cantidad ingresada y el nuevo id_gastos generado respectivamente.
+CREATE PROCEDURE ActualizarAlmacenAlimentos
+(@IdAlimento int, @Cantidad int, @Monto money)
 AS
-RETURN(
-  WITH GPorAnio AS (
-    SELECT ab.Id AS Albergue_ID,ab.Nombre AS Albergue,YEAR(g.Fecha_Compra) AS Año, SUM(g.Monto) AS Monto_Total
-    FROM Gastos g
-	INNER JOIN Almacen a ON a.ID_Gastos = g.ID_Gastos
-	INNER JOIN Albergue ab ON ab.Id = a.Albergue_Id
-	WHERE ab.Id = @idalbergue
-    GROUP BY ab.Id, ab.Nombre, YEAR(g.Fecha_Compra)
+BEGIN
+  SET NOCOUNT ON;
+
+  UPDATE Alimentos
+  SET Cantidad = Cantidad + @Cantidad
+  WHERE ID_Food = @IdAlimento;
+
+  DECLARE @fechaCompra date;
+  SET @fechaCompra = GETDATE();
+  DECLARE @idGasto int;
+  SELECT @idGasto = MAX(ID_Gastos)+1
+  FROM Gastos;
+
+  INSERT INTO Gastos (ID_Gastos,Nombre, Fecha_compra, Monto)
+  VALUES (@idGasto,'Alimentos', @fechaCompra, @Monto);
+
+  UPDATE Almacen
+  SET ID_Gastos = @idGasto
+  WHERE ID_Food = @IdAlimento;
+END;
+
+Exec ActualizarAlmacenAlimentos @IdAlimento=20, @Cantidad=5,@Monto=180.5
+
+--2. PROCEDURE DeleteMedicamentoAnimal: Este procedure nos ayuda a eliminar el medicamento a un animal cuando ya no sea necesario 
+--que lo tenga asignado dentro de su receta. Además, si el id del medicamento no fue asignado, imprime un mensaje 
+--'No se encontro medicamento asignado al animal...'.
+CREATE PROCEDURE DeleteMedicamentoAnimal(@IdAnimal int, @IdMedicamento int)
+AS
+BEGIN
+
+  IF EXISTS (
+    SELECT 1
+    FROM Receta
+    WHERE ID_Animal = @IdAnimal
+      AND id_medicamento = @IdMedicamento
   )
-  SELECT Albergue_ID,Albergue,Año, Monto_Total
-  FROM GPorAnio
-);
-SELECT *
-FROM GastosPorAnioAlbergue(26);
---Con esta funcion podemos encontrar el total de gastos por año de un albergue en especifico.
+  BEGIN
+    DELETE FROM Receta
+    WHERE ID_Animal = @IdAnimal
+      AND id_medicamento = @IdMedicamento;
+	PRINT 'El medicamento asignado al animal fue eliminado!';
+  END
+  ELSE
+  BEGIN
+    PRINT 'No se encontro medicamento asignado al animal...';
+  END
 
+END;
 
-CREATE FUNCTION CantidadMascotas(@idalbergue int) RETURNS TABLE
-AS
-RETURN(
-SELECT a.Nombre AS Albergue, COUNT(m.ID) AS CantidadMascotas
-FROM Albergue a
-LEFT JOIN Animal m ON a.Id = m.Albergue_Id
-WHERE a.Id=@idalbergue
-GROUP BY a.Nombre);
-
-SELECT *
-FROM CantidadMascotas(32);
--- Esta funcion ayudara a los albergues, que cuentan con el software, a saber cuantas mascotas tienen 
-
-
-
+Exec DeleteMedicamentoAnimal @IdAnimal=20, @IdMedicamento=28
