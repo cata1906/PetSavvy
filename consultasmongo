@@ -1,18 +1,35 @@
 -----2 por cada uno usando aggregates
+--------------------------------------------------------andrea
+--devuelve la cantidad de animales con la afinidad "Tranquilo"
+--para un albergue especifico
 [
   {
-    "$match": {
-      "Afinidad": {
-        "$eq": "Jugueton"
-      }
-    }
+    $match: {
+      Afinidad: {
+        $eq: "Tranquilo",
+      },
+      
+     Albergue_Nombre: 
+        "Centro de Adopcion Hogar Animal",
+    },
+
   },
   {
-    "$group": {
-      "_id":null,
-      "JuguetonCount": {
-        "$sum": 1
-      }
-    }
+    $group: {
+      _id: null,
+      JuguetonCount: {
+        $sum: 1,
+      },
+    },
+  },
+]
+
+--devuelve los animales de un albergue ordenados de menor a mayor de acuerdo a la edad
+[
+  {
+    $match: { Albergue_Nombre: "Centro de Adopcion Hogar Animal" }
+  },
+  {
+    $sort: { Edad: 1 }
   }
 ]
