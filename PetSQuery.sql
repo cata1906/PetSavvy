@@ -1012,3 +1012,76 @@ BEGIN
 END;
 
 Exec DeleteMedicamentoAnimal @IdAnimal=20, @IdMedicamento=28
+
+----------------------------------------------------Brenda ----------------------------------------------------
+	
+-----------Basico----------
+
+Create function MotrarCantidadAdopcionAnio(@year date) Returns table
+as
+Return
+select count(*) as cantidaanimals
+ from[dbo].[Proceso_Adopcion]d
+  JOIN [dbo].[Animal]a
+  ON d.id_Animal=a.Id
+  JOIN [dbo].[Cita]c
+  ON d.id_Cita=c.Id
+  JOIN[dbo].[Encargado] e
+  ON d.Encargado_DNI=e.DNI
+where YEAR(c.FechaCita)=YEAR(@year) 
+
+Select * from dbo.MotrarCantidadAdopcionAnio('2019')
+
+-----Nos ayuda a identificar la cantidad de animalesdados en adopción en un año en específico .Además adicionamos el nombre del encargado con más adopciones
+----------INTERMEDIO--------------
+---1---
+Create Procedure Motrarmedicamentosporvencer( @day int)
+as begin
+set Nocount ON;
+declare @fechavencimeinto date= dateadd(DAY,@day,Getdate());
+select Count(*) as medicamentoscaducados
+From [dbo].[Medicamentos] m
+where m.Fecha_Vencimiento <= @fechavencimeinto
+end;
+
+Exec Motrarmedicamentosporvencer @day=5;
+
+Select	* from Medicamentos
+---2---
+Create procedure EditarGastos
+@id int,
+@Dato money
+as 
+begin
+	update Gastos
+	set Monto=@Dato
+	where ID_Gastos=@id;
+end
+
+Exec EditarGastos @id=2, @Dato= 25.5;
+Select * from Gastos
+
+Create procedure BorrarAnimaldeAlbergue
+@id int
+as 
+begin
+	if EXISTS (select * from [dbo].[Proceso_Adopcion] where id_Animal = @Id)
+  begin
+		delete from [dbo].[Animal]
+		where Id=@id;
+
+		delete from [dbo].[Albergue]
+		where Id=@id;
+	print 'El animal fue dado el adopcion y se fue del albergue'
+  end
+	else
+  begin
+	print 'El animal no ha sido dado en adopción'
+  end
+end
+
+Exec BorrarAnimaldeAlbergue @id=2;
+Select * from Albergue;
+
+--Este procedure nos ayuda a eliminar el a un animal del albergue, ya que dicho animal a sido adoptado,
+--si en caso no esté en el proceso de adopción saldrá un mensaje que el animal no ha sido adoptado 
