@@ -33,3 +33,15 @@
     $sort: { Edad: 1 }
   }
 ]
+
+-------------------------------------------------------------Brenda-----------------------------------
+
+----Devuelve la cantidad de medicamentos que fueron dados a un perro en específico 
+db.Receta.find(
+{Animal_id:2})
+.count()
+
+--------Obtener el animal con la edad más alta 
+db.Animal.find().sort({edad:-1}).limit(1);
+
+
