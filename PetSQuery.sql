@@ -1085,3 +1085,51 @@ Select * from Albergue;
 
 --Este procedure nos ayuda a eliminar el a un animal del albergue, ya que dicho animal a sido adoptado,
 --si en caso no esté en el proceso de adopción saldrá un mensaje que el animal no ha sido adoptado 
+
+----------------------------------------------------Salvador ----------------------------------------------------
+-----------Basico----------
+--Esta consulta nos permite obtener la lista de mascotas adoptadas por un albergue específico, solo con el ingreso del id del Albergue.
+CREATE FUNCTION MascotasAdoptadasPorAlbergue(@idAlbergue int)
+RETURNS TABLE
+AS
+RETURN (
+    SELECT a.Id, a.Raza, ad.Nombre AS Adoptante, c.FechaCita
+    FROM [dbo].[Proceso_Adopcion] pa
+    JOIN Animal a ON pa.id_Animal = a.Id
+    JOIN Adoptante ad ON pa.id_Adoptante = ad.Id_Adoptante
+    JOIN Cita c ON pa.id_Cita = c.Id
+    JOIN Encargado e ON pa.Encargado_DNI = e.DNI
+    WHERE e.Albergue_Id = @idAlbergue
+);
+
+
+Select * from dbo.MascotasAdoptadasPorAlbergue('1')
+
+
+----------INTERMEDIO--------------
+---1---
+--Este procedure te permite consultar los gastos realizados en una fecha específica para así tener un mejor plano de las finanzas. Este nos retorna el nombre del gasto, la fecha de compra y el monto correspondiente.
+CREATE PROCEDURE ConsultarGastosPorFecha(@fechaCompra date)
+AS
+BEGIN
+    SELECT Nombre, Fecha_compra, Monto
+    FROM Gastos
+    WHERE Fecha_compra = @fechaCompra;
+END;
+
+EXECUTE ConsultarGastosPorFecha '2022-01-22';
+
+---2---
+--Este procedure te permite consultar la cantidad de animales que tiene un Albergue según su id retornando el nombre del Albergue y la cantidad de animales asociados a este y gracias a ello podemos brindar un mejor detalle al usuario adoptante para que tenga una idea de la cantidad de animales que aún hay en el albergue.
+CREATE PROCEDURE ContarAnimalesPorAlbergue(@idAlbergue int)
+AS
+BEGIN
+    SELECT A.Nombre, COUNT(AN.Id) AS CantidadAnimales
+    FROM Albergue A
+    LEFT JOIN Animal AN ON A.Id = AN.Albergue_Id
+    WHERE A.Id = @idAlbergue
+    GROUP BY A.Nombre;
+END;
+
+
+EXEC ContarAnimalesPorAlbergue @idAlbergue = 12;
