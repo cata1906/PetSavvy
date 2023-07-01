@@ -73,3 +73,46 @@ db.Alimentos.aggregate([
   { $sort: { cantidadTotal: -1 } },
   { $limit: 1 }
 ])
+
+
+-------------------------------------------------------------Salvador-----------------------------------
+--Obtener la cantidad de animales con el tamaño mayor o igual a 30 para un albergue en específico.
+db.Animal.aggregate([
+    {
+      $match: {
+        Albergue_Nombre: "Refugio de Animales Patitas",
+        Tamanio: { $gte: 30 }
+      }
+    },
+    {
+      $count: "CantidadAnimales"
+    }
+])
+
+--Obtener el animal con la menor edad según el nombre del Albergue ingresado.
+db.Animal.aggregate([
+  {
+    $match: {
+      Albergue_Nombre: "Refugio de Mascotas Patas Felices"
+    }
+  },
+  {
+    $sort: {
+      Edad: 1
+    }
+  },
+  {
+    $limit: 1
+  },
+  {
+    $project: {
+      _id: 0,
+      AnimalId: "$Id",
+      Edad: "$Edad",
+      Raza: "$Raza",
+      Tamanio: "$Tamanio",
+      Color: "$Color",
+      Afinidad: "$Afinidad"
+    }
+  }
+])
