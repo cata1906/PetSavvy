@@ -1085,3 +1085,51 @@ Select * from Albergue;
 
 --Este procedure nos ayuda a eliminar el a un animal del albergue, ya que dicho animal a sido adoptado,
 --si en caso no esté en el proceso de adopción saldrá un mensaje que el animal no ha sido adoptado 
+
+
+----------------------------------------------------Salvador ----------------------------------------------------
+-----------Basico----------
+CREATE FUNCTION MascotasAdoptadasPorAlbergue(@idAlbergue int)
+RETURNS TABLE
+AS
+RETURN (
+    SELECT a.Id, a.Raza, ad.Nombre AS Adoptante, c.FechaCita
+    FROM [dbo].[Proceso_Adopcion] pa
+    JOIN Animal a ON pa.id_Animal = a.Id
+    JOIN Adoptante ad ON pa.id_Adoptante = ad.Id_Adoptante
+    JOIN Cita c ON pa.id_Cita = c.Id
+    JOIN Encargado e ON pa.Encargado_DNI = e.DNI
+    WHERE e.Albergue_Id = @idAlbergue
+);
+
+
+Select * from dbo.MascotasAdoptadasPorAlbergue('1')
+
+
+----------INTERMEDIO--------------
+---1---
+CREATE PROCEDURE ConsultarGastosPorFecha(@fechaCompra date)
+AS
+BEGIN
+    SELECT Nombre, Fecha_compra, Monto
+    FROM Gastos
+    WHERE Fecha_compra = @fechaCompra;
+END;
+
+EXECUTE ConsultarGastosPorFecha '2022-01-22';
+
+---2---
+CREATE PROCEDURE ContarAnimalesPorAlbergue(@idAlbergue int)
+AS
+BEGIN
+    SELECT A.Nombre, COUNT(AN.Id) AS CantidadAnimales
+    FROM Albergue A
+    LEFT JOIN Animal AN ON A.Id = AN.Albergue_Id
+    WHERE A.Id = @idAlbergue
+    GROUP BY A.Nombre;
+END;
+
+
+EXEC ContarAnimalesPorAlbergue @idAlbergue = 12;
+
+
