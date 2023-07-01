@@ -1,3 +1,52 @@
+Use PetSavvy
+---------------------------Receta--------------------------------
+
+db.Receta.insertOne({_id:1, Medicamentos_Nombre:'Prednovet', Veterinario_Nombre:'Jorge', Animal_id:1, "Animal": ({_id:1, Edad:10, Raza:'Pastor Aleman', Tamanio:65, Color:'Marron', Afinidad:'Jugueton', Albergue_Nombre:'Albergue Canino La Esperanza'})});
+
+db.Receta.insertOne({_id:2, Medicamentos_Nombre:'Doxitel', Veterinario_Nombre:'Lesli', Animal_id:2, "Animal": ({_id:2, Edad:1, Raza:'Persa', Tamanio:5, Color:'Plomo', Afinidad:'Jugueton', Albergue_Nombre:'Refugio de Mascotas Patas Felices'})});
+
+db.Receta.insertOne({_id:3,Medicamentos_Nombre:'Hepatiopet',Veterinario_Nombre:'Raul',Animal_id:1,"Animal":({_id:2,Edad:5,Raza:'Labrador',Tamanio:25,Color:'Blanco',Ainidad:'Travieso', Albergue_Nombre:'Albergue Canino La Esperanza'})});
+
+db.Receta.insertOne({_id:4,Medicamentos_Nombre:'Gastropet',Veterinario_Nombre:'Raul',Animal_id:2,"Animal":({_id:4,Edad:6,Raza:'Angora',Tamanio:10,Color:'Gris',Ainidad:'Tranquilo', Albergue_Nombre:'Patitas al rescate'})});
+
+db.Receta.insertOne({_id:5,Medicamentos_Nombre:'prednovet',Veterinario_Nombre:'Raul',Animal_id:2,"Animal":({_id:3,Edad:4,Raza:'Pastor Aleman,Tamanio:9,Color:'Negro',Ainidad:'Jugueton', Albergue_Nombre:'Patitas al rescate'})});
+
+db.Receta.insertOne({_id:6,Medicamentos_Nombre:'prednovet',Veterinario_Nombre:'Raul',Animal_id:2,"Animal":({_id:3,Edad:4,Raza:'Pastor Aleman,Tamanio:9,Color:'Negro',Ainidad:'Jugueton', Albergue_Nombre:'Canino La Esperanza'})});
+
+db.Receta.insertOne({_id:7,Medicamentos_Nombre:'Doxitel',Veterinario_Nombre:'Cata',Animal_id:5,"Animal":({_id:8,Edad:5,Raza:'Mestizo',Tamanio:5,Color:'Atrigrado gris',Ainidad:'Jugueton', Albergue_Nombre:'Hogar del amor'})});
+
+db.Receta.insertOne({_id:8,Medicamentos_Nombre:'Nutromix',Veterinario_Nombre:'Victor',Animal_id:6,"Animal":({_id:6,Edad:5,Raza:'Buldog ingles',Tamanio:6,Color:'Blanco con marron',Ainidad:'Travieso', Albergue_Nombre:'Hogar del amor'})});
+
+db.Receta.insertOne({_id:9,Medicamentos_Nombre:'Omeprazol',Veterinario_Nombre:'Pedro',Animal_id:5,"Animal":({_id:5,Edad:10,Raza:'Mestizo',Tamanio:12,Color:'Champage',Ainidad:'Traqnuilo', Albergue_Nombre:'Hogar del amor'})});
+
+db.Receta.insertOne({_id:10,Medicamentos_Nombre:'Doxitel',Veterinario_Nombre:'Cata',Animal_Id:1, "Animal": ({_id:1, Edad:10, Raza:'Pastor Aleman', Tamanio:65, Color:'Marron', Afinidad:'Jugueton', Albergue_Nombre:'Albergue Canino La Esperanza'})});
+
+
+--------------------------Almacen------------------------------
+
+db.Almacen.insertOne({_id: 1,Gastos_Nombre: "Luz",Accesorios_Nombre: "Collar",Alimentos_Marca: "RicoCat"});
+
+db.Almacen.insertOne({_id: 2,Gastos_Nombre: "Agua",Accesorios_Nombre: "Mantas",Alimentos_Marca: "RicoCan"});
+
+db.Almacen.insertOne({_id: 3,Gastos_Nombre: "Pago Alquiler",Accesorios_Nombre: "Platos",Alimentos_Marca: "Acana"});
+
+db.Almacen.insertOne({_id: 4,Gastos_Nombre: "Compra de medicamentos",Accesorios_Nombre: "Pines",Alimentos_Marca: "Monge"});
+
+db.Almacen.insertOne({_id: 5,Gastos_Nombre: "Luz",Accesorios_Nombre: "Cadena",Alimentos_Marca: "Purina Pro Plan"});
+
+db.Almacen.insertOne({_id: 6,Gastos_Nombre: "Servicio telefonico",Accesorios_Nombre: "Collar",Alimentos_Marca: "RicoCan"});
+
+db.Almacen.insertOne({_id: 7,Gastos_Nombre: "Internet",Accesorios_Nombre: "Platos",Alimentos_Marca: "Purina Pro Plan"});
+
+db.Almacen.insertOne({_id: 8,Gastos_Nombre: "Internet",Accesorios_Nombre: "Placa",Alimentos_Marca: "Hill’s"});
+
+db.Almacen.insertOne({_id: 9,Gastos_Nombre: "Compra de artefactos",Accesorios_Nombre: "Cadena",Alimentos_Marca: "Hill’s"});
+
+db.Almacen.insertOne({_id: 10,Gastos_Nombre: "Agua",Accesorios_Nombre: "Cepillo",Alimentos_Marca: "Advance Veterinary Diets."});
+
+db.Almacen.insertOne({_id: 11,Gastos_Nombre: "Agua",Accesorios_Nombre: "Cepillo dental",Alimentos_Marca: "Advance Veterinary Diets."});
+
+
 -----2 por cada uno usando aggregates
 --------------------------------------------------------andrea
 --devuelve la cantidad de animales con la afinidad "Tranquilo"
