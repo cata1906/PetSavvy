@@ -1,4 +1,4 @@
-CREATE DATABASE PetSavvy
+dCREATE DATABASE PetSavvy
 GO
 use PetSavvy
 GO
@@ -1176,13 +1176,13 @@ EXEC GenerarReporteGastosMensuales @Mes = 6, @Anio = 2022
 
 ----2-----
 --Este procedure nos ayuda a mantener una constante actualizacion de la edad de los perros, actualizando la edad cada año 	
-CREATE PROCEDURE UpdateAnimalAge
+CREATE PROCEDURE Updateedadanimal
     @albergueId int,
-    @newAge int
+    @nuevaedad int
 AS
 BEGIN
     UPDATE Animal
-    SET Edad = @newAge
+    SET Edad = @nuevaedad
     FROM Animal
     INNER JOIN Albergue ON Animal.Albergue_Id = Albergue.Id
     WHERE Albergue.Id = @albergueId;
