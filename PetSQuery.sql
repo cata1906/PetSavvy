@@ -1133,3 +1133,35 @@ END;
 
 
 EXEC ContarAnimalesPorAlbergue @idAlbergue = 12;
+
+
+----------------------------------------------------Tony---------------------------------------------------
+----1----
+--Este procedure nos ayuda a generar un reporte de gastos introduciendo un mes y un año
+CREATE PROCEDURE GenerarReporteGastosMensuales
+    @Mes INT,
+    @Anio INT
+AS
+BEGIN
+    SELECT Nombre, Fecha_compra, Monto
+    FROM [dbo].[Gastos]
+    WHERE MONTH(Fecha_compra) = @Mes AND YEAR(Fecha_compra) = @Anio;
+END;
+
+EXEC GenerarReporteGastosMensuales @Mes = 6, @Anio = 2022
+
+----2-----
+--Este procedure nos ayuda a mantener una constante actualizacion de la edad de los perros, actualizando la edad cada año 	
+CREATE PROCEDURE UpdateAnimalAge
+    @albergueId int,
+    @newAge int
+AS
+BEGIN
+    UPDATE Animal
+    SET Edad = @newAge
+    FROM Animal
+    INNER JOIN Albergue ON Animal.Albergue_Id = Albergue.Id
+    WHERE Albergue.Id = @albergueId;
+END;
+
+EXEC UpdateAnimalAge 8, 5
