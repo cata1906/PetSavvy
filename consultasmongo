@@ -46,6 +46,101 @@ db.Almacen.insertOne({_id: 10,Gastos_Nombre: "Agua",Accesorios_Nombre: "Cepillo"
 
 db.Almacen.insertOne({_id: 11,Gastos_Nombre: "Agua",Accesorios_Nombre: "Cepillo dental",Alimentos_Marca: "Advance Veterinary Diets."});
 
+----------------------------------------------Animal---------------------------------
+db.Animal.insertOne({
+  "_id": 1,
+  "Edad": 10,
+  "Raza": "Pastor Aleman",
+  "Tamanio": 65,
+  "Color": "Marron",
+  "Afinidad": "Jugueton",
+  "Albergue_Nombre": "Albergue Canino La Esperanza"
+}),
+db.Animal.insertOne({
+  "_id": 2,
+  "Edad": 1,
+  "Raza": "Persa",
+  "Tamanio": 5,
+  "Color": "Plomo",
+  "Afinidad": "Jugueton",
+  "Albergue_Nombre": "Refugio de Mascotas Patas Felices"
+}),
+db.Animal.insertOne({
+  "_id": 3,
+  "Edad": 3,
+  "Raza": "Labrador",
+  "Tamanio": 25,
+  "Color": "Blaco",
+  "Afinidad": "Tranquilo",
+  "Albergue_Nombre": "Centro de Adopcion Hogar Animal"
+}),
+db.Animal.insertOne({
+  "_id": 4,
+  "Edad": 2,
+  "Raza": "Labrador",
+  "Tamanio": 20,
+  "Color": "Negro",
+  "Afinidad": "Jugueton",
+  "Albergue_Nombre": "Centro de Adopcion Hogar Animal"
+}),
+db.Animal.insertOne({
+  "_id": 5,
+  "Edad": 8,
+  "Raza": "Shitzu",
+  "Tamanio": 10,
+  "Color": "Blanco",
+  "Afinidad": "Tranquilo",
+  "Albergue_Nombre": "Centro de Adopcion Hogar Animal"
+}),
+db.Animal.insertOne({
+  "_id": 6,
+  "Edad": 5,
+  "Raza": "Labrador Retriever",
+  "Tamanio": 30,
+  "Color": "Negro",
+  "Afinidad": "Amigable",
+  "Albergue_Nombre": "Albergue Canino La Esperanza"
+}),
+db.Animal.insertOne({
+  "_id": 7,
+  "Edad": 6,
+  "Raza": "Border Collie",
+  "Tamanio": 45,
+  "Color": "Negro y Blanco",
+  "Afinidad": "Trabajador",
+  "Albergue_Nombre": "Refugio de Animales Patitas"
+}),
+db.Animal.insertOne({
+  "_id": 8,
+  "Edad": 1,
+  "Raza": "Chihuahua",
+  "Tamanio": 5,
+  "Color": "Marrón claro",
+  "Afinidad": "Leal",
+  "Albergue_Nombre": "Refugio de Animales Felices"
+}),
+db.Animal.insertOne({
+  "_id": 9,
+  "Edad": 8,
+  "Raza": "Pastor Belga",
+  "Tamanio": 70,
+  "Color": "Negro y Marrón",
+  "Afinidad": "Protector",
+  "Albergue_Nombre": "Refugio de Animales Felices"
+});
+db.Animal.insertOne({
+  "_id": 10,
+  "Edad": 2,
+  "Raza": "Bichón Maltés",
+  "Tamanio": 10,
+  "Color": "Blanco",
+  "Afinidad": "Afable",
+  "Albergue_Nombre": "Refugio de Animales Felices"
+});
+-------------------------------------Proceso de adopcion------------------------------------------------------
+
+
+
 
 -----2 por cada uno usando aggregates
 --------------------------------------------------------andrea
