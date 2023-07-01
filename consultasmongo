@@ -64,3 +64,12 @@ db.Gastos.aggregate([
   }
 ])
 
+--devuelve la marca de comida de la que el albergue tiene mayor cantidad 
+db.Alimentos.aggregate([
+  { $group: {
+    _id: "$Marca",
+    cantidadTotal: { $sum: "$cantidad" }
+  }},
+  { $sort: { cantidadTotal: -1 } },
+  { $limit: 1 }
+])
