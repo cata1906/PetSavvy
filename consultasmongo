@@ -44,4 +44,23 @@ db.Receta.find(
 --------Obtener el animal con la edad más alta 
 db.Animal.find().sort({edad:-1}).limit(1);
 
+----------------------------------Tony----------------------------------
+
+--devuelve el promedio de gastos que se realizaron en el año 2022
+db.Gastos.aggregate([
+  {
+    $match: {
+      Fecha_compra: {
+        $gte: ISODate("2022-01-01"),
+        $lt: ISODate("2023-01-01")
+      }
+    }
+  },
+  {
+    $group: {
+      _id: null,
+      PromedioGastos: { $avg: "$Monto" }
+    }
+  }
+])
 
