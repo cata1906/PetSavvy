@@ -138,7 +138,175 @@ db.Animal.insertOne({
   "Albergue_Nombre": "Refugio de Animales Felices"
 });
 -------------------------------------Proceso de adopcion------------------------------------------------------
+db.ProcesoAdopcion.insertOne({
+  "_id": 1,
+  "Encargado_Nombre": "Raul",
+  "Adoptante_Nombre": "Octavio",
+  "Cita_Id": 1,
+  "Animal_Id": 1,
+  "Animal": {
+    "_id": 1,
+    "Edad": 10,
+    "Raza": "Pastor Aleman",
+    "Tamanio": 65,
+    "Color": "Marron",
+    "Afinidad": "Jugueton",
+    "Albergue_Nombre": "Albergue Canino La Esperanza"
+  }
+});
 
+db.ProcesoAdopcion.insertOne({
+  "_id": 2,
+  "Encargado_Nombre": "Patricio",
+  "Adoptante_Nombre": "Deja",
+  "Cita_Id": 2,
+  "Animal_Id": 2,
+  "Animal": {
+    "_id": 2,
+    "Edad": 1,
+    "Raza": "Persa",
+    "Tamanio": 5,
+    "Color": "Plomo",
+    "Afinidad": "Jugueton",
+    "Albergue_Nombre": "Refugio de Mascotas Patas Felices"
+  }
+});
+
+db.ProcesoAdopcion.insertOne({
+  "_id": 3,
+  "Encargado_Nombre": "Meredith",
+  "Adoptante_Nombre": "Charles",
+  "Cita_Id": 3,
+  "Animal_Id": 3,
+  "Animal": {
+    "_id": 3,
+    "Edad": 3,
+    "Raza": "Labrador",
+    "Tamanio": 25,
+    "Color": "Blaco",
+    "Afinidad": "Tranquilo",
+    "Albergue_Nombre": "Centro de Adopcion Hogar Animal"
+  }
+});
+
+db.ProcesoAdopcion.insertOne({
+  "_id": 4,
+  "Encargado_Nombre": "Juan",
+  "Adoptante_Nombre": "Carlos",
+  "Cita_Id": 4,
+  "Animal_Id": 4,
+  "Animal": {
+    "_id": 4,
+    "Edad": 2,
+    "Raza": "Labrador",
+    "Tamanio": 20,
+    "Color": "Negro",
+    "Afinidad": "Jugueton",
+    "Albergue_Nombre": "Centro de Adopcion Hogar Animal"
+  }
+});
+
+db.ProcesoAdopcion.insertOne({
+  "_id": 5,
+  "Encargado_Nombre": "Maria",
+  "Adoptante_Nombre": "Alex",
+  "Cita_Id": 5,
+  "Animal_Id": 5,
+  "Animal": {
+    "_id": 5,
+    "Edad": 8,
+    "Raza": "Shitzu",
+    "Tamanio": 10,
+    "Color": "Blanco",
+    "Afinidad": "Tranquilo",
+    "Albergue_Nombre": "Centro de Adopcion Hogar Animal"
+  }
+});
+
+db.ProcesoAdopcion.insertOne({
+  "_id": 6,
+  "Encargado_Nombre": "Gerado",
+  "Adoptante_Nombre": "Juan",
+  "Cita_Id": 6,
+  "Animal_Id": 6,
+  "Animal": {
+    "_id": 6,
+    "Edad": 5,
+    "Raza": "Labrador Retriever",
+    "Tamanio": 30,
+    "Color": "Negro",
+    "Afinidad": "Amigable",
+    "Albergue_Nombre": "Albergue Canino La Esperanza"
+  }
+});
+
+db.ProcesoAdopcion.insertOne({
+  "_id": 7,
+  "Encargado_Nombre": "Francisco",
+  "Adoptante_Nombre": "Lucia",
+  "Cita_Id": 7,
+  "Animal_Id": 7,
+  "Animal": {
+    "_id": 7,
+    "Edad": 6,
+    "Raza": "Border Collie",
+    "Tamanio": 45,
+    "Color": "Negro y Blanco",
+    "Afinidad": "Trabajador",
+    "Albergue_Nombre": "Refugio de Animales Patitas"
+  }
+});
+
+db.ProcesoAdopcion.insertOne({
+  "_id": 8,
+  "Encargado_Nombre": "Raul",
+  "Adoptante_Nombre": "Octavio",
+  "Cita_Id": 8,
+  "Animal_Id": 8,
+  "Animal": {
+    "_id": 8,
+    "Edad": 1,
+    "Raza": "Chihuahua",
+    "Tamanio": 5,
+    "Color": "Marrón claro",
+    "Afinidad": "Leal",
+    "Albergue_Nombre": "Refugio de Animales Felices"
+  }
+});
+
+db.ProcesoAdopcion.insertOne({
+  "_id": 9,
+  "Encargado_Nombre": "Patricio",
+  "Adoptante_Nombre": "Fran",
+  "Cita_Id": 9,
+  "Animal_Id": 9,
+  "Animal": {
+    "_id": 9,
+    "Edad": 8,
+    "Raza": "Pastor Belga",
+    "Tamanio": 70,
+    "Color": "Negro y Marrón",
+    "Afinidad": "Protector",
+    "Albergue_Nombre": "Refugio de Animales Felices"
+  }
+});
+
+db.ProcesoAdopcion.insertOne({
+  "_id": 10,
+  "Encargado_Nombre": "Raul",
+  "Adoptante_Nombre": "Octavio",
+  "Cita_Id": 10,
+  "Animal_Id": 10,
+  "Animal": {
+    "_id": 10,
+    "Edad": 2,
+    "Raza": "Bichón Maltés",
+    "Tamanio": 10,
+    "Color": "Blanco",
+    "Afinidad": "Afable",
+    "Albergue_Nombre": "Refugio de Animales Felices"
+  }
+});
 
 
 
