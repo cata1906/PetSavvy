@@ -1136,6 +1136,30 @@ EXEC ContarAnimalesPorAlbergue @idAlbergue = 12;
 
 
 ----------------------------------------------------Tony---------------------------------------------------
+----------BÁSICO----------
+--Esta funcion nos ayuda a  obtener los detalles de una receta, incluyendo la información del animal y del veterinario
+CREATE FUNCTION ObtenerDetallesReceta(@recetaId int) 
+RETURNS TABLE
+AS
+RETURN
+(
+    SELECT r.Id AS RecetaId, 
+	a.Id AS AnimalId, 
+	a.Raza AS RazaAnimal, 
+	v.id AS VeterinarioId, 
+	v.Nombre AS NombreVeterinario, 
+	v.Apellido AS ApellidoVeterinario
+    FROM [dbo].[Receta] r
+    INNER JOIN [dbo].[Animal] a 
+	ON r.id_Animal = a.Id
+    INNER JOIN [dbo].[Veterinario] v 
+	ON r.id_Veterinario = v.id
+    WHERE r.Id = @recetaId
+)
+
+SELECT * FROM ObtenerDetallesReceta(7);
+
+----------INTERMEDIO----------
 ----1----
 --Este procedure nos ayuda a generar un reporte de gastos introduciendo un mes y un año
 CREATE PROCEDURE GenerarReporteGastosMensuales
